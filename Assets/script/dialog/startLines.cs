@@ -24,29 +24,28 @@ public class startLines : MonoBehaviour
     void Update()
     {
         if (index == 1) {
-            button.text = "Wow, thank you!";
-            Text.text = "Considering that you have been away from home for a long time. So I arranged some hints around the screen.";
+            button.text = "I have to say it`s super cool to have this kind of holiday !!!";
+            Text.text = "Ya, that`s right. Día de Muertos is actually spanish. In English, you can call it as Day of the dead. And it is a holiday celebrated in Mexico, during which people remember and honor their deceased loved ones.";
         }
         
         if (index == 2) {
-            button.text = "What can I do with it?";
-            Text.text = "Be careful, these wizards are cunning. They have arranged a lot of little monsters nearby.";
+            button.text = "OMG, anything that I have help you?";
+            Text.text = "Hahahaha, yeah~~ It is not easy to have a fulfilling and happy Day of the Dead. Now there are a bunch of monsters from nowhere filling the forest, blocking my way to meet my gramma.";
         }
 
         if (index == 3) {
-            button.text = "But this hammer sucks.";
-            Text.text = "You don't need worry too much, I believe you can kill with one blow.";
+            button.text = "Oh~ Got it. But...emmm....kill the monsters with this scythe?";
+            Text.text = "If you really want to help me, you can use your scythe to kill those monsters and lead me to my grandma's grave! ! ! I really need your help.";
         }
 
         if (index == 4) {
-            button.text = "That`s great!";
-            Text.text = "Oh my boy, watch out, there are magic learning points on the way. You can get the magic you need there.";
+            button.text = "Seriously?!?!?! That`s great!";
+            Text.text = "Are you worried that this weapon is not easy to use? Hahahaha, don't worry, my friend. This forest holds magic that my grandma used to collect. If you find them, use them to help you defeat monsters.";
         }
 
         if (index == 5) {
-            button.text = "I will save the town!";
-            Text.text = "Come on boy, the future of our hometown depends on you.";
-            Invoke("desDialog", 2f);
+            button.text = "I will!";
+            Text.text = "On this journey, I will be with you. When necessary, I'll show up to give you some hints or something. Hope it can help you. By the way, there are still some traps on the road, please be careful! ! ! good luck~~~";
         }
 
         if(index == 6){
