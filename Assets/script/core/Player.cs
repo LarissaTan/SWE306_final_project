@@ -116,4 +116,31 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bandage")
+        {
+            if(HP != 100 && HP + 1 <= 100){
+                HP++;
+                slider.value = HP;
+                collision.gameObject.SetActive(false);
+            }
+        }
+
+        if (collision.gameObject.tag == "kit")
+        {
+            if(HP != 100 && HP + 5 <= 100){
+                HP+=5;
+                slider.value = HP;
+                collision.gameObject.SetActive(false);
+            }
+
+            if(HP != 100 && HP + 5 > 100){
+                HP = 100;
+                slider.value = HP;
+                collision.gameObject.SetActive(false);
+            }
+        }
+    }
+
 }
