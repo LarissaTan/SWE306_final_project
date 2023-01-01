@@ -44,3 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: texture
+    uniqueID: 751356711
+    locked: 0
+  - name: map
+    uniqueID: 1623173549
+    locked: 0
+  - name: character
+    uniqueID: 29384677
+    locked: 0

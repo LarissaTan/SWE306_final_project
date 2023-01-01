@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
             if (jump >=1) {
                 jump = 0;
-                rig.AddForce(Vector2.up * 500); 
+                rig.AddForce(Vector2.up * 1000); 
             }
         }
 
