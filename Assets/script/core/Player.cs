@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        CharacterInit();
         hunSlider.value = hudun; 
         slider.value = HP; 
     }
@@ -68,6 +69,24 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1); 
         }
 
+    }
+
+    public void CharacterInit()
+    {
+        if (globe.characterIndex == 0)
+        {
+            animator.runtimeAnimatorController =
+                Resources.Load("animation/Player") as
+                RuntimeAnimatorController;
+        }
+
+        if (globe.characterIndex == 1)
+        {
+            // 切换animator
+            animator.runtimeAnimatorController =
+                Resources.Load("animation/idle_side") as
+                RuntimeAnimatorController;
+        }
     }
 
 
