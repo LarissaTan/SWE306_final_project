@@ -22,10 +22,12 @@ public class UICanvas : MonoBehaviour
 
     public void OnPlayerGame( )
     {
-        SceneManager.LoadScene(1);
+        globe.characterIndex = 0;
+        SceneManager.LoadScene("New Scene");
     }
     public void ToPlayerGame()
     {
-        SceneManager.LoadScene(2);
+        globe.characterIndex = 1;
+        SceneManager.LoadScene("New Scene");
     }
 }
