@@ -411,7 +411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9000\u51FA\t"
+  m_Text: Exist
 --- !u!222 &346199653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1151,7 +1151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F00\u59CB"
+  m_Text: Start
 --- !u!222 &1188207809
 CanvasRenderer:
   m_ObjectHideFlags: 0
