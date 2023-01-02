@@ -8,6 +8,7 @@ namespace LayerLab
     public class Panel : MonoBehaviour
     {
         [SerializeField] private GameObject[] otherPanels;
+        public GameObject error;
 
         public void OnEnable()
         {
@@ -43,6 +44,16 @@ namespace LayerLab
         public void returnMenu()
         {
             SceneManager.LoadScene("menu");
+        }
+
+        public void buyBandage(){
+            if(globe.coins < 1){
+                error.SetActive(true);
+            }else{
+                globe.coins --;
+                if(Player.HP != 100)
+                    Player.HP +=10;
+            }
         }
     }
 }

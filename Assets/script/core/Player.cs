@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public GameObject huOjb;
     public GameObject attackObj;
 
-    public int HP = 100;
+    public static int HP = 100;
     public int hudun = 100;
 
     public float jump;
