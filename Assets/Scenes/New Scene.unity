@@ -6818,6 +6818,10 @@ MonoBehaviour:
   hudun: 100
   jump: 0
   attack: 0
+  music: {fileID: 809413171}
+  att: {fileID: 8300000, guid: acf8209ae47db498ab3d7b068b3f4f29, type: 3}
+  m1: {fileID: 8300000, guid: 8dfcae34791b3a447b81d6653208f596, type: 3}
+  m2: {fileID: 8300000, guid: f10ac845045af4ffab3b7becd6c7a788, type: 3}
   attackImage: {fileID: 1931404948}
   aImage: {fileID: 481659511}
   sImage: {fileID: 2091469570}

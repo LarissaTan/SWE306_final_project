@@ -21,6 +21,13 @@ public class Player : MonoBehaviour
     public float jump;
     public float attack;
 
+    [Header("audio")]
+    public AudioSource music;
+    public AudioClip att;
+    public AudioClip m1;
+    public AudioClip m2;
+
+    [Header("attack")]
     public Image attackImage;
     public Image aImage;
     public Image sImage;
@@ -75,6 +82,14 @@ public class Player : MonoBehaviour
         hunSlider.value = hudun;
         slider.value = HP;
         b = GetComponent<blood>();
+
+        music = gameObject.AddComponent<AudioSource>();
+        music.playOnAwake = false;
+        music.loop = false;
+
+        att = Resources.Load<AudioClip>("music/attack_player");
+        m1 = Resources.Load<AudioClip>("music/fire");
+        m2 = Resources.Load<AudioClip>("music/shu");
     }
 
 
@@ -145,12 +160,16 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U) && Time.time >= m1_timer + MagicCoolDown1) 
         {
             shoot();
+            music.clip = m1;
+            music.Play();
             m1_timer = Time.time;
             m1_check = true;
         }
         if (Input.GetKeyDown(KeyCode.I) && Time.time >= m2_timer + MagicCoolDown2) 
         {
             Shu();
+            music.clip = m2;
+            music.Play();
             m2_timer = Time.time;
             m2_check = true;
         }
@@ -364,6 +383,8 @@ public class Player : MonoBehaviour
         // 如果按下J键
         if (Input.GetKeyDown("j"))
         {
+            music.clip = att;
+            music.Play();
             attackObj.SetActive(true);
             if (attackCoolDownTimeCount <= 0.0f)
             {
