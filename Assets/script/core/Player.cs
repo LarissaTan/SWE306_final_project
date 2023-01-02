@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
@@ -48,6 +51,12 @@ public class Player : MonoBehaviour
 
     private blood b;
 
+    public GameObject BulletPerfabs;
+    public Transform BulletPoint;
+
+    public float faceLastPosition = 1;
+    public float moveHorizontal;
+
 
     void Start()
     {
@@ -68,6 +77,15 @@ public class Player : MonoBehaviour
         Debug.Log(attackCoolDownTimeCount);
 
         keyboard();
+
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (moveHorizontal != 0)
+        {
+            faceLastPosition = moveHorizontal;
+        }
+
+        ReleaseMagic();
 
     }
 
@@ -109,6 +127,34 @@ public class Player : MonoBehaviour
         {
             endpanel[0].SetActive(true);
         }
+
+    }
+
+    public void ReleaseMagic()
+    {
+        if (Input.GetKeyDown(KeyCode.U)) // && Time.time >= LastMagic1 + MagicCoolDown1
+        {
+            shoot();
+            // if (p.minusM1())
+            // {
+            //     Debug.Log("pass here");
+            //     Magic1();
+            // }
+        }
+        // if (Input.GetKeyDown(KeyCode.I) && Time.time >= LastMagic2 + MagicCoolDown2)
+        // {
+        //     if (p.minusM2())
+        //     {
+        //         Magic2();
+        //     }
+        // }
+        // if (Input.GetKeyDown(KeyCode.O) && Time.time >= LastMagic3 + MagicCoolDown3)
+        // {
+        //     if (p.minusM3())
+        //     {
+        //         Magic3();
+        //     }
+        // }
 
     }
 
@@ -204,6 +250,19 @@ public class Player : MonoBehaviour
                 TakeDame(tmp.damage());
             }
         }
+    }
+
+    void shoot(){
+        float x,y;
+        shoot bc = GetComponent<shoot>();
+        // music.clip = skill;
+        // music.Play();
+        GameObject tmp = Instantiate(BulletPerfabs, BulletPoint.position, transform.rotation);
+        if(faceLastPosition == 1)
+            tmp.transform.localScale = new Vector3(1,1,1);
+        else
+            tmp.transform.localScale = new Vector3(-1,1,1);
+        // bc.Move(x, 30f);
     }
 
     private void hurtAnimation()
