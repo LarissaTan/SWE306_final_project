@@ -27,6 +27,7 @@ public class boss : MonoBehaviour
     private float IsFaceRight = 0;
 
     private int status = 0;
+    public HealthBar bar;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         myCollider = GetComponent<Collider2D>();
+        bar = GetComponent<HealthBar>();
         Xleft = leftpoint.position.x;
         Xright = rightpoint.position.x;
         Destroy(leftpoint.gameObject);
@@ -53,9 +55,17 @@ public class boss : MonoBehaviour
         if(isRun)   Movement();
         else        rb.velocity = new Vector2(0, 0);
 
-        if(isDie){
-            if(Time.time - timer > 1.02)
+        if(isHurt){
+            if(Time.time - timer > 0.03){
+                isHurt = false;
+                animator.SetBool("IsHurt", false);
+                timer = Time.time;
+            }
+
+            if(bar.healthLevel() == 0.0f){
+                if(Time.time - timer > 1.02)
                 Destroy(this.gameObject);
+            }
         }else{
             if(isIdle && Time.time - timer > 0.1){
                 isIdle = false;
@@ -99,6 +109,7 @@ public class boss : MonoBehaviour
                 IsFaceRight = 1;
             }
         }
+        bar.turn(transform.position.x, transform.position.y + 1.5f);
     }
 
     void action(){
@@ -118,4 +129,19 @@ public class boss : MonoBehaviour
             timer = Time.time;
         }
     }
+
+    public int damage(){
+        if(isAttack)
+            return 40;
+        else
+            return 20;
+    }
+
+    public void getHurt(int i){
+        isHurt = true;
+        animator.SetBool("IsHurt", true);
+        timer = Time.time;
+        bar.damage(i);
+    }
+
 }

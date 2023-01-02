@@ -11305,6 +11305,7 @@ GameObject:
   - component: {fileID: 1060808733}
   - component: {fileID: 1060808732}
   - component: {fileID: 1060808734}
+  - component: {fileID: 1060808735}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -11469,6 +11470,24 @@ MonoBehaviour:
   isAngry: 0
   isRun: 0
   isIdle: 1
+--- !u!114 &1060808735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060808728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4aeb6538356246679e66ffce9f22187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 20
+  maxHealth: 20
+  currentHealth: 0
+  destroyObject: 0
+  healthBar: {fileID: 1474308114}
+  fill: 0
 --- !u!1 &1062901224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6203476374080513173, guid: d8b3d7ce8c0b6e94e869771af563374b, type: 3}

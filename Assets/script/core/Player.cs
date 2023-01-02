@@ -194,6 +194,16 @@ public class Player : MonoBehaviour
                 TakeDame(tmp.damage());
             }
         }
+
+        if(collision.gameObject.tag == "boss"){
+            boss tmp = collision.gameObject.GetComponent<boss>();
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.07f){
+                tmp.getHurt(1);
+            }else{
+                hurtAnimation();
+                TakeDame(tmp.damage());
+            }
+        }
     }
 
     private void hurtAnimation()
