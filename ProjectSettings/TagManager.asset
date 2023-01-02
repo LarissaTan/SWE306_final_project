@@ -13,6 +13,7 @@ TagManager:
   - snail
   - ghost
   - eye
+  - boss
   layers:
   - Default
   - TransparentFX

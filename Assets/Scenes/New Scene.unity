@@ -11308,7 +11308,7 @@ GameObject:
   - component: {fileID: 1060808735}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11470,6 +11470,7 @@ MonoBehaviour:
   isAngry: 0
   isRun: 0
   isIdle: 1
+  bar: {fileID: 0}
 --- !u!114 &1060808735
 MonoBehaviour:
   m_ObjectHideFlags: 0
