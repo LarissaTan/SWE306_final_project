@@ -316,7 +316,7 @@ public class Player : MonoBehaviour
             m2_img.fillAmount = (Time.time - m2_timer)/MagicCoolDown2;
             if(Time.time - m2_timer >= MagicCoolDown2){
                 m2_check = false;
-                m1_img.fillAmount = 0f;
+                m2_img.fillAmount = 0f;
             }
         }
 

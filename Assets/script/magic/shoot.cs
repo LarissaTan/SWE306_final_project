@@ -56,5 +56,11 @@ public class shoot : MonoBehaviour
             tmp.kill();
             Destroy(this.gameObject);
         }
+
+        if(collision.gameObject.tag == "boss"){
+            boss tmp = collision.gameObject.GetComponent<boss>();
+            tmp.getHurt(5);
+            Destroy(this.gameObject);
+        }
     }
 }
