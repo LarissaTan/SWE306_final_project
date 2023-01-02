@@ -6621,7 +6621,8 @@ MonoBehaviour:
   endpanel:
   - {fileID: 373289294}
   - {fileID: 725772431}
-  BulletPerfabs: {fileID: 4928411148107920601, guid: d06d3f773ccdc475a85ba5339adf3ee8, type: 3}
+  BulletPerfabs: {fileID: 8011522093725009417, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
+  ShuPerfabs: {fileID: 4928411148107920601, guid: d06d3f773ccdc475a85ba5339adf3ee8, type: 3}
   BulletPoint: {fileID: 403259328}
   faceLastPosition: 1
   moveHorizontal: 0

@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
     private blood b;
 
     public GameObject BulletPerfabs;
+    public GameObject ShuPerfabs;
     public Transform BulletPoint;
 
     public float faceLastPosition = 1;
@@ -141,21 +142,14 @@ public class Player : MonoBehaviour
             //     Magic1();
             // }
         }
-        // if (Input.GetKeyDown(KeyCode.I) && Time.time >= LastMagic2 + MagicCoolDown2)
-        // {
-        //     if (p.minusM2())
-        //     {
-        //         Magic2();
-        //     }
-        // }
-        // if (Input.GetKeyDown(KeyCode.O) && Time.time >= LastMagic3 + MagicCoolDown3)
-        // {
-        //     if (p.minusM3())
-        //     {
-        //         Magic3();
-        //     }
-        // }
-
+        if (Input.GetKeyDown(KeyCode.I)) //&& Time.time >= LastMagic2 + MagicCoolDown2
+        {
+            Shu();
+            // if (p.minusM2())
+            // {
+            //     Magic2();
+            // }
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -258,6 +252,19 @@ public class Player : MonoBehaviour
         // music.clip = skill;
         // music.Play();
         GameObject tmp = Instantiate(BulletPerfabs, BulletPoint.position, transform.rotation);
+        if(faceLastPosition == 1)
+            tmp.transform.localScale = new Vector3(1,1,1);
+        else
+            tmp.transform.localScale = new Vector3(-1,1,1);
+        // bc.Move(x, 30f);
+    }
+
+    void Shu(){
+        float x,y;
+        shoot bc = GetComponent<shoot>();
+        // music.clip = skill;
+        // music.Play();
+        GameObject tmp = Instantiate(ShuPerfabs, BulletPoint.position, transform.rotation);
         if(faceLastPosition == 1)
             tmp.transform.localScale = new Vector3(1,1,1);
         else
