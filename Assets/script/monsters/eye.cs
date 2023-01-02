@@ -72,7 +72,6 @@ public class eye : MonoBehaviour
      void movement(){
         if(IsFaceRight == 1)
         {
-            Debug.Log("face right");
             rb.velocity = new Vector2(Speed, rb.velocity.y);
             if(transform.position.x >= Xright){
                 transform.localScale = new Vector3(2f,2f,1);
@@ -80,7 +79,6 @@ public class eye : MonoBehaviour
                    Debug.Log(IsFaceRight);
             }
         }else if (IsFaceRight != 1){
-            Debug.Log("face left");
             rb.velocity = new Vector2(-Speed, rb.velocity.y);
             if(transform.position.x <= Xleft){
                 transform.localScale = new Vector3(-2f,2f,1);

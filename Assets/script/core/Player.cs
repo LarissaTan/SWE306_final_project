@@ -44,12 +44,15 @@ public class Player : MonoBehaviour
 
     public GameObject[] endpanel;
 
+    private blood b;
+
 
     void Start()
     {
         CharacterInit();
         hunSlider.value = hudun;
         slider.value = HP;
+        b = GetComponent<blood>();
     }
 
 
@@ -152,7 +155,7 @@ public class Player : MonoBehaviour
     }
 
     private void hurtAnimation(){
-
+        b.FlashScreen();
     }
 
     private void keyboard(){
