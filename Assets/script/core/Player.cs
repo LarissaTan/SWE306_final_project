@@ -150,9 +150,31 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "skeleton")
         {
             hurtAnimation();
-            skeletion tmp;
-            tmp = collision.gameObject.GetComponent<skeletion>();
             TakeDame(10);
+        }
+
+        if (collision.gameObject.tag == "ghost")
+        {
+            hurtAnimation();
+            ghost tmp;
+            tmp = collision.gameObject.GetComponent<ghost>();
+            TakeDame(tmp.damage());
+        }
+
+        if (collision.gameObject.tag == "eye")
+        {
+            hurtAnimation();
+            eye tmp;
+            tmp = collision.gameObject.GetComponent<eye>();
+            TakeDame(tmp.damage());
+        }
+
+        if (collision.gameObject.tag == "snail")
+        {
+            hurtAnimation();
+            snails tmp;
+            tmp = collision.gameObject.GetComponent<snails>();
+            TakeDame(tmp.damage());
         }
     }
 

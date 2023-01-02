@@ -87,4 +87,11 @@ public class eye : MonoBehaviour
             }
         }
     }
+
+    public int damage(){
+        if(isAttack)
+            return 30;
+        else
+            return 10;
+    }
 }

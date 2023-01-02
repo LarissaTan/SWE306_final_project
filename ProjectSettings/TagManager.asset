@@ -11,6 +11,8 @@ TagManager:
   - kit
   - skeleton
   - snail
+  - ghost
+  - eye
   layers:
   - Default
   - TransparentFX
