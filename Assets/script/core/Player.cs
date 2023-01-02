@@ -58,6 +58,11 @@ public class Player : MonoBehaviour
     public float faceLastPosition = 1;
     public float moveHorizontal;
 
+    private float MagicCoolDown1 = 2f;
+    private float MagicCoolDown2 = 4f;
+    private float m1_timer = 0.0f;
+    private float m2_timer = 0.0f;
+
 
     void Start()
     {
@@ -133,22 +138,15 @@ public class Player : MonoBehaviour
 
     public void ReleaseMagic()
     {
-        if (Input.GetKeyDown(KeyCode.U)) // && Time.time >= LastMagic1 + MagicCoolDown1
+        if (Input.GetKeyDown(KeyCode.U) && Time.time >= m1_timer + MagicCoolDown1) 
         {
             shoot();
-            // if (p.minusM1())
-            // {
-            //     Debug.Log("pass here");
-            //     Magic1();
-            // }
+            m1_timer = Time.time;
         }
-        if (Input.GetKeyDown(KeyCode.I)) //&& Time.time >= LastMagic2 + MagicCoolDown2
+        if (Input.GetKeyDown(KeyCode.I) && Time.time >= m2_timer + MagicCoolDown2) 
         {
             Shu();
-            // if (p.minusM2())
-            // {
-            //     Magic2();
-            // }
+            m2_timer = Time.time;
         }
     }
 
