@@ -1,0 +1,1272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab8ee0d4f7f91a4ca569ef0eacc2738, type: 3}
+  m_Name: InputIconsManager
+  m_EditorClassIdentifier: 
+  iconSetConfiguratorSO: {fileID: 11400000, guid: d9f6a2d5fd0df16419a30f0ab431893f, type: 2}
+  usedActionAssets:
+  - {fileID: -944628639613478452, guid: 595ef5e5235cea64298b2862c4e8f020, type: 3}
+  controlSchemeName_Keyboard: Keyboard And Mouse
+  controlSchemeName_Gamepad: Gamepad
+  showAllInputOptionsInStyles: 1
+  multipleInputsDelimiter: ' <size=80%>or</size> '
+  compositeInputDelimiter: ', '
+  textDisplayForUnboundActions: Undefined
+  textDisplayLanguage: 0
+  actionNameRenamings:
+  - originalString: delta
+    outputString: Mouse
+  - originalString: position
+    outputString: Mouse
+  - originalString: leftbutton
+    outputString: Left Mouse Button
+  - originalString: rightButton
+    outputString: Right  Mouse Button
+  loadSavedInputBindingOverrides: 1
+  displayType: 0
+  inputStyleKeyboardDataList:
+  - binding:
+      m_Name: 
+      m_Id: 6e5d4175-d238-41c5-85ab-2f0481f48109
+      m_Path: '*/{Cancel}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Cancel>
+    bindingName: Platformer Controls/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse" name="{CANCEL}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="{CANCEL}">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+  - binding:
+      m_Name: 
+      m_Id: 8b72a088-54a9-46bc-9664-d48b944ef580
+      m_Path: '*/{Submit}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Submit>
+    bindingName: Platformer Controls/Submit
+    inputStyleString: <sprite="Keyboard and Mouse" name="{SUBMIT}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="{SUBMIT}">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move>
+    bindingName: Platformer Controls/Move
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard and
+      Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard and
+      Mouse" name="D"> <size=80%>or</size> <sprite="Keyboard and Mouse" name="UPARROW"><sprite="Keyboard
+      and Mouse" name="LEFTARROW"><sprite="Keyboard and Mouse" name="DOWNARROW"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard
+      and Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="D">
+    humanReadableString: W, A, S, D <size=80%>or</size> UP ARROW, LEFT ARROW, DOWN
+      ARROW, RIGHT ARROW
+    humanReadableString_singleInput: W, A, S, D
+  - binding:
+      m_Name: up
+      m_Id: d57e0987-ea9f-4b18-9042-239931d4c060
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/up>
+    bindingName: Platformer Controls/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W">
+    humanReadableString: W <size=80%>or</size> UP ARROW
+    humanReadableString_singleInput: W
+  - binding:
+      m_Name: left
+      m_Id: 54b99838-0c45-421e-af38-b1f25b3f6927
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/left>
+    bindingName: Platformer Controls/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="A"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="A">
+    humanReadableString: A <size=80%>or</size> LEFT ARROW
+    humanReadableString_singleInput: A
+  - binding:
+      m_Name: down
+      m_Id: 75168890-922f-4122-9968-1ecac0f33c28
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/down>
+    bindingName: Platformer Controls/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse" name="S"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="S">
+    humanReadableString: S <size=80%>or</size> DOWN ARROW
+    humanReadableString_singleInput: S
+  - binding:
+      m_Name: right
+      m_Id: 77680fb0-0b9d-4a74-97de-9e3149ad6526
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/right>
+    bindingName: Platformer Controls/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="D"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="D">
+    humanReadableString: D <size=80%>or</size> RIGHT ARROW
+    humanReadableString_singleInput: D
+  - binding:
+      m_Name: 
+      m_Id: 43d1488b-4ff2-4456-b1bf-a368a70fb680
+      m_Path: <Mouse>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Look
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Look>
+    bindingName: Platformer Controls/Look
+    inputStyleString: <sprite="Keyboard and Mouse" name="DELTA">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="DELTA">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+  - binding:
+      m_Name: 
+      m_Id: 53929f6a-5508-4218-8adb-8908d374622f
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Jump
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump>
+    bindingName: Platformer Controls/Jump
+    inputStyleString: <sprite="Keyboard and Mouse" name="SPACE"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="U"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse" name="I">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SPACE">
+    humanReadableString: SPACE <size=80%>or</size> U <size=80%>or</size> I
+    humanReadableString_singleInput: SPACE
+  - binding:
+      m_Name: 
+      m_Id: 0a8b228c-a1b1-4fd1-adab-8c3a7be60060
+      m_Path: <Keyboard>/u
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Jump
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/2>
+    bindingName: Platformer Controls/Jump/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="U">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="U">
+    humanReadableString: U
+    humanReadableString_singleInput: U
+  - binding:
+      m_Name: 
+      m_Id: f190d222-dad2-4c4e-8b1f-f4be1cb78504
+      m_Path: <Keyboard>/i
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Jump
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/3>
+    bindingName: Platformer Controls/Jump/3
+    inputStyleString: <sprite="Keyboard and Mouse" name="I">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="I">
+    humanReadableString: I
+    humanReadableString_singleInput: I
+  - binding:
+      m_Name: 
+      m_Id: b12426a0-38ab-4d90-95e0-6840fcd30db6
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Attack
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack>
+    bindingName: Platformer Controls/Attack
+    inputStyleString: <sprite="Keyboard and Mouse" name="LEFTBUTTON"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="Z">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="LEFTBUTTON">
+    humanReadableString: LMB <size=80%>or</size> Y
+    humanReadableString_singleInput: LMB
+  - binding:
+      m_Name: 
+      m_Id: 7ea09533-6d4a-461b-99c3-4cfddb21be85
+      m_Path: <Keyboard>/y
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Attack
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack/2>
+    bindingName: Platformer Controls/Attack/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="Z">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="Z">
+    humanReadableString: Y
+    humanReadableString_singleInput: Y
+  - binding:
+      m_Name: 
+      m_Id: b1cd39dd-50de-4065-8a48-9dfd90cdb832
+      m_Path: <Mouse>/scroll
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Switch Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Switch Weapon>
+    bindingName: Platformer Controls/Switch Weapon
+    inputStyleString: <sprite="Keyboard and Mouse" name="SCROLL">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SCROLL">
+    humanReadableString: SCROLL
+    humanReadableString_singleInput: SCROLL
+  - binding:
+      m_Name: 
+      m_Id: 42716e15-291c-4c71-8ded-0d03279959df
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Pause>
+    bindingName: Platformer Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Move>
+    bindingName: Helicopter Controls/Move
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard and
+      Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard and
+      Mouse" name="D">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard
+      and Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="D">
+    humanReadableString: W, A, S, D
+    humanReadableString_singleInput: W, A, S, D
+  - binding:
+      m_Name: up
+      m_Id: 81f1535e-4742-4293-b31e-9a0d776987df
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/up>
+    bindingName: Helicopter Controls/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse" name="W">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W">
+    humanReadableString: W
+    humanReadableString_singleInput: W
+  - binding:
+      m_Name: left
+      m_Id: b34b35d6-2643-45a0-82fd-d3c0cea01bdc
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/left>
+    bindingName: Helicopter Controls/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="A">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="A">
+    humanReadableString: A
+    humanReadableString_singleInput: A
+  - binding:
+      m_Name: down
+      m_Id: b514b4b7-8141-4364-b73c-6e72441387ff
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/down>
+    bindingName: Helicopter Controls/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse" name="S">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="S">
+    humanReadableString: S
+    humanReadableString_singleInput: S
+  - binding:
+      m_Name: right
+      m_Id: c0a2b69c-3d92-4067-bc84-b96da53223f2
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/right>
+    bindingName: Helicopter Controls/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="D">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="D">
+    humanReadableString: D
+    humanReadableString_singleInput: D
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Rotate>
+    bindingName: Helicopter Controls/Rotate
+    inputStyleString: <sprite="Keyboard and Mouse" name="LEFTARROW"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="LEFTARROW"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    humanReadableString: LEFT ARROW, RIGHT ARROW
+    humanReadableString_singleInput: LEFT ARROW, RIGHT ARROW
+  - binding:
+      m_Name: left
+      m_Id: 55a80617-ae53-48b6-8ac5-32076fd4598b
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Rotate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Rotate/left>
+    bindingName: Helicopter Controls/Rotate/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="LEFTARROW">
+    humanReadableString: LEFT ARROW
+    humanReadableString_singleInput: LEFT ARROW
+  - binding:
+      m_Name: right
+      m_Id: e5b44e4a-f668-4070-8186-4d1ed8eb4260
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Rotate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Rotate/right>
+    bindingName: Helicopter Controls/Rotate/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="RIGHTARROW">
+    humanReadableString: RIGHT ARROW
+    humanReadableString_singleInput: RIGHT ARROW
+  - binding:
+      m_Name: 
+      m_Id: 6d4e30aa-a5c2-4d5b-b64e-e9ee9b2f3176
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Throw Bomb
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Throw Bomb>
+    bindingName: Helicopter Controls/Throw Bomb
+    inputStyleString: <sprite="Keyboard and Mouse" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SPACE">
+    humanReadableString: SPACE
+    humanReadableString_singleInput: SPACE
+  - binding:
+      m_Name: 
+      m_Id: 76feed7e-1bb6-4431-9761-dddbe4ae7fad
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Next Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Next Weapon>
+    bindingName: Helicopter Controls/Next Weapon
+    inputStyleString: <sprite="Keyboard and Mouse" name="E">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="E">
+    humanReadableString: E
+    humanReadableString_singleInput: E
+  - binding:
+      m_Name: 
+      m_Id: 3ecad2a5-52e4-49e0-9620-33f63e9fd6b7
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Previous Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Previous Weapon>
+    bindingName: Helicopter Controls/Previous Weapon
+    inputStyleString: <sprite="Keyboard and Mouse" name="Q">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="Q">
+    humanReadableString: Q
+    humanReadableString_singleInput: Q
+  - binding:
+      m_Name: 
+      m_Id: 80f49d82-e2bd-48b5-8718-c9db2f58db40
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Pause>
+    bindingName: Helicopter Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate>
+    bindingName: Menu Controls/Navigate
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard and
+      Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard and
+      Mouse" name="D"> <size=80%>or</size> <sprite="Keyboard and Mouse" name="UPARROW"><sprite="Keyboard
+      and Mouse" name="DOWNARROW"><sprite="Keyboard and Mouse" name="LEFTARROW"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard
+      and Mouse" name="A"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="D">
+    humanReadableString: W, A, S, D <size=80%>or</size> UP ARROW, DOWN ARROW, LEFT
+      ARROW, RIGHT ARROW
+    humanReadableString_singleInput: W, A, S, D
+  - binding:
+      m_Name: up
+      m_Id: a67b96dc-9151-496b-9be2-b4d65a82f52a
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/up>
+    bindingName: Menu Controls/Navigate/up
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W">
+    humanReadableString: W <size=80%>or</size> UP ARROW
+    humanReadableString_singleInput: W
+  - binding:
+      m_Name: left
+      m_Id: e3222f78-952b-444d-835b-2982fc0170a7
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/left>
+    bindingName: Menu Controls/Navigate/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="A"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="A">
+    humanReadableString: A <size=80%>or</size> LEFT ARROW
+    humanReadableString_singleInput: A
+  - binding:
+      m_Name: down
+      m_Id: 74f4078b-890d-407d-9f24-e6fd7eba040f
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/down>
+    bindingName: Menu Controls/Navigate/down
+    inputStyleString: <sprite="Keyboard and Mouse" name="S"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="S">
+    humanReadableString: S <size=80%>or</size> DOWN ARROW
+    humanReadableString_singleInput: S
+  - binding:
+      m_Name: right
+      m_Id: e6e18455-9a59-4e72-8b1b-790600bd2ecf
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/right>
+    bindingName: Menu Controls/Navigate/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="D"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="D">
+    humanReadableString: D <size=80%>or</size> RIGHT ARROW
+    humanReadableString_singleInput: D
+  - binding:
+      m_Name: 
+      m_Id: 14559c94-e8a7-426b-8687-fa5f1420a0c1
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Left Click
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Left Click>
+    bindingName: Menu Controls/Left Click
+    inputStyleString: <sprite="Keyboard and Mouse" name="LEFTBUTTON">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="LEFTBUTTON">
+    humanReadableString: LMB
+    humanReadableString_singleInput: LMB
+  - binding:
+      m_Name: 
+      m_Id: b5076a57-fe62-4632-8d6c-da0844960a14
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Point
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Point>
+    bindingName: Menu Controls/Point
+    inputStyleString: <sprite="Keyboard and Mouse" name="POSITION">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="POSITION">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+  - binding:
+      m_Name: 
+      m_Id: 40b14102-9017-4522-862f-97d92a0da5f6
+      m_Path: '*/{Submit}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Submit>
+    bindingName: Menu Controls/Submit
+    inputStyleString: <sprite="Keyboard and Mouse" name="{SUBMIT}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="{SUBMIT}">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+  - binding:
+      m_Name: 
+      m_Id: 6fee8919-99e7-4770-abd4-da1b7d4e4cc4
+      m_Path: '*/{Cancel}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Cancel>
+    bindingName: Menu Controls/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse" name="{CANCEL}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="{CANCEL}">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+  - binding:
+      m_Name: 
+      m_Id: dfac3b8e-d348-4a7a-b60b-14745c641340
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Pause>
+    bindingName: Menu Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+  inputStyleGamepadDataList:
+  - binding:
+      m_Name: 
+      m_Id: 6e5d4175-d238-41c5-85ab-2f0481f48109
+      m_Path: '*/{Cancel}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Cancel>
+    bindingName: Platformer Controls/Cancel
+    inputStyleString: <sprite="XBox" name="CANCEL">
+    inputStyleString_singleInput: <sprite="XBox" name="CANCEL">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+  - binding:
+      m_Name: 
+      m_Id: 8b72a088-54a9-46bc-9664-d48b944ef580
+      m_Path: '*/{Submit}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Submit>
+    bindingName: Platformer Controls/Submit
+    inputStyleString: <sprite="XBox" name="SUBMIT">
+    inputStyleString_singleInput: <sprite="XBox" name="SUBMIT">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+  - binding:
+      m_Name: 
+      m_Id: df04a4e1-fc36-4ebd-b050-536736220da7
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: StickDeadzone
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move>
+    bindingName: Platformer Controls/Move
+    inputStyleString: <sprite="XBox" name="LEFT STICK"> <size=80%>or</size> <sprite="XBox"
+      name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="D-PAD/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK">
+    humanReadableString: LEFT STICK <size=80%>or</size> D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN,
+      D-PAD/RIGHT
+    humanReadableString_singleInput: LEFT STICK
+  - binding:
+      m_Name: up
+      m_Id: dccdbd52-a42b-4cd1-8d05-0c183783ee8b
+      m_Path: <Gamepad>/dpad/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/up>
+    bindingName: Platformer Controls/Move/up
+    inputStyleString: <sprite="XBox" name="D-PAD/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP">
+    humanReadableString: D-PAD/UP
+    humanReadableString_singleInput: D-PAD/UP
+  - binding:
+      m_Name: left
+      m_Id: 108dc7af-f38c-4d0a-9f86-062ec334c93d
+      m_Path: <Gamepad>/dpad/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/left>
+    bindingName: Platformer Controls/Move/left
+    inputStyleString: <sprite="XBox" name="D-PAD/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/LEFT">
+    humanReadableString: D-PAD/LEFT
+    humanReadableString_singleInput: D-PAD/LEFT
+  - binding:
+      m_Name: down
+      m_Id: ad179dd8-de52-4961-99a0-e6c1bdd42377
+      m_Path: <Gamepad>/dpad/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/down>
+    bindingName: Platformer Controls/Move/down
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN
+    humanReadableString_singleInput: D-PAD/DOWN
+  - binding:
+      m_Name: right
+      m_Id: 60079aca-f5a6-48f6-a478-eb67df808d9d
+      m_Path: <Gamepad>/dpad/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/right>
+    bindingName: Platformer Controls/Move/right
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT
+    humanReadableString_singleInput: D-PAD/RIGHT
+  - binding:
+      m_Name: 
+      m_Id: d23f9eb5-e32b-417b-8edf-d10cd6bdc1d3
+      m_Path: <Gamepad>/rightStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Look
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Look>
+    bindingName: Platformer Controls/Look
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+  - binding:
+      m_Name: 
+      m_Id: 355a0c69-9553-4bd1-a784-246492c1b00f
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Jump
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump>
+    bindingName: Platformer Controls/Jump
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH"> <size=80%>or</size> <sprite="XBox"
+      name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH <size=80%>or</size> RIGHT TRIGGER
+    humanReadableString_singleInput: BUTTON SOUTH
+  - binding:
+      m_Name: 
+      m_Id: 64e3af65-8d3c-4841-8008-3204e5bc7b74
+      m_Path: <Gamepad>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Jump
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/2>
+    bindingName: Platformer Controls/Jump/2
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER">
+    humanReadableString: RIGHT TRIGGER
+    humanReadableString_singleInput: RIGHT TRIGGER
+  - binding:
+      m_Name: 
+      m_Id: 3e6d6425-a990-4434-b58d-57464db363d4
+      m_Path: <Gamepad>/buttonWest
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Attack
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack>
+    bindingName: Platformer Controls/Attack
+    inputStyleString: <sprite="XBox" name="BUTTON WEST"> <size=80%>or</size> <sprite="XBox"
+      name="RIGHT SHOULDER"> <size=80%>or</size> <sprite="XBox" name="LEFT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST <size=80%>or</size> RIGHT SHOULDER <size=80%>or</size>
+      LEFT SHOULDER
+    humanReadableString_singleInput: BUTTON WEST
+  - binding:
+      m_Name: 
+      m_Id: 192e71d2-d2ab-4546-bb46-b4326e82cb34
+      m_Path: <Gamepad>/rightShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Attack
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack/2>
+    bindingName: Platformer Controls/Attack/2
+    inputStyleString: <sprite="XBox" name="RIGHT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT SHOULDER">
+    humanReadableString: RIGHT SHOULDER
+    humanReadableString_singleInput: RIGHT SHOULDER
+  - binding:
+      m_Name: 
+      m_Id: 72e3ce28-6a8a-4845-959e-8ecdd3c9dff7
+      m_Path: <Gamepad>/leftShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Attack
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack/3>
+    bindingName: Platformer Controls/Attack/3
+    inputStyleString: <sprite="XBox" name="LEFT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT SHOULDER">
+    humanReadableString: LEFT SHOULDER
+    humanReadableString_singleInput: LEFT SHOULDER
+  - binding:
+      m_Name: 
+      m_Id: 392a83c2-4687-478c-bd7c-d88905c34822
+      m_Path: <Gamepad>/rightStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Switch Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Switch Weapon>
+    bindingName: Platformer Controls/Switch Weapon
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+  - binding:
+      m_Name: 
+      m_Id: 7bc14fbd-1107-4761-aa6f-b3367d7705e6
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Pause>
+    bindingName: Platformer Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Move>
+    bindingName: Helicopter Controls/Move
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT <size=80%>or</size>
+      LEFT STICK
+    humanReadableString_singleInput: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT
+  - binding:
+      m_Name: up
+      m_Id: c4580c79-8a2e-40af-b95d-47c6faa5bde9
+      m_Path: <Gamepad>/dpad/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/up>
+    bindingName: Helicopter Controls/Move/up
+    inputStyleString: <sprite="XBox" name="D-PAD/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP">
+    humanReadableString: D-PAD/UP
+    humanReadableString_singleInput: D-PAD/UP
+  - binding:
+      m_Name: left
+      m_Id: 41f57d51-e464-4674-af82-e29928eeb38b
+      m_Path: <Gamepad>/dpad/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/left>
+    bindingName: Helicopter Controls/Move/left
+    inputStyleString: <sprite="XBox" name="D-PAD/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/LEFT">
+    humanReadableString: D-PAD/LEFT
+    humanReadableString_singleInput: D-PAD/LEFT
+  - binding:
+      m_Name: down
+      m_Id: 0c4ce0ff-6bcb-4edf-96de-9e747a7453fe
+      m_Path: <Gamepad>/dpad/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/down>
+    bindingName: Helicopter Controls/Move/down
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN
+    humanReadableString_singleInput: D-PAD/DOWN
+  - binding:
+      m_Name: right
+      m_Id: e618dbfc-e14a-473e-83d4-4004b07c6b7e
+      m_Path: <Gamepad>/dpad/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/right>
+    bindingName: Helicopter Controls/Move/right
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT
+    humanReadableString_singleInput: D-PAD/RIGHT
+  - binding:
+      m_Name: 
+      m_Id: d68ab3a3-16c4-4f48-8b18-59e83d07423d
+      m_Path: <Gamepad>/rightStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Rotate
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Rotate>
+    bindingName: Helicopter Controls/Rotate
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+  - binding:
+      m_Name: 
+      m_Id: 666d5a31-2d05-4952-b858-eca22a0ccf8d
+      m_Path: <Gamepad>/buttonWest
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Throw Bomb
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Throw Bomb>
+    bindingName: Helicopter Controls/Throw Bomb
+    inputStyleString: <sprite="XBox" name="BUTTON WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST
+    humanReadableString_singleInput: BUTTON WEST
+  - binding:
+      m_Name: 
+      m_Id: 7ce37bcf-bea5-4925-b940-32ccffc0a0ec
+      m_Path: <Gamepad>/rightShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Next Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Next Weapon>
+    bindingName: Helicopter Controls/Next Weapon
+    inputStyleString: <sprite="XBox" name="RIGHT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT SHOULDER">
+    humanReadableString: RIGHT SHOULDER
+    humanReadableString_singleInput: RIGHT SHOULDER
+  - binding:
+      m_Name: 
+      m_Id: 77bacfe9-9b1b-4fee-9799-3057e9a1b8ee
+      m_Path: <Gamepad>/leftShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Previous Weapon
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Previous Weapon>
+    bindingName: Helicopter Controls/Previous Weapon
+    inputStyleString: <sprite="XBox" name="LEFT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT SHOULDER">
+    humanReadableString: LEFT SHOULDER
+    humanReadableString_singleInput: LEFT SHOULDER
+  - binding:
+      m_Name: 
+      m_Id: 1ed6cf77-fd71-4c1c-bce2-3535565a3b80
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Pause>
+    bindingName: Helicopter Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+  - binding:
+      m_Name: 
+      m_Id: d687f18d-7559-488c-8542-e3da3a3dd1f7
+      m_Path: <Gamepad>/dpad
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Navigate
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate>
+    bindingName: Menu Controls/Navigate
+    inputStyleString: <sprite="XBox" name="D-PAD"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK/UP"><sprite="XBox" name="LEFT STICK/DOWN"><sprite="XBox" name="LEFT
+      STICK/LEFT"><sprite="XBox" name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD">
+    humanReadableString: D-PAD <size=80%>or</size> LEFT STICK/UP, LEFT STICK/DOWN,
+      LEFT STICK/LEFT, LEFT STICK/RIGHT
+    humanReadableString_singleInput: D-PAD
+  - binding:
+      m_Name: up
+      m_Id: bed70561-f1cc-4c56-9715-66475aa6437f
+      m_Path: <Gamepad>/leftStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/up>
+    bindingName: Menu Controls/Navigate/up
+    inputStyleString: <sprite="XBox" name="LEFT STICK/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/UP">
+    humanReadableString: LEFT STICK/UP
+    humanReadableString_singleInput: LEFT STICK/UP
+  - binding:
+      m_Name: down
+      m_Id: 0005d032-151a-4ee0-8127-110d55e5ed9d
+      m_Path: <Gamepad>/leftStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/down>
+    bindingName: Menu Controls/Navigate/down
+    inputStyleString: <sprite="XBox" name="LEFT STICK/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/DOWN">
+    humanReadableString: LEFT STICK/DOWN
+    humanReadableString_singleInput: LEFT STICK/DOWN
+  - binding:
+      m_Name: left
+      m_Id: 84fcadd5-5853-4142-b3f9-58a5ab2ad788
+      m_Path: <Gamepad>/leftStick/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/left>
+    bindingName: Menu Controls/Navigate/left
+    inputStyleString: <sprite="XBox" name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: LEFT STICK/LEFT
+    humanReadableString_singleInput: LEFT STICK/LEFT
+  - binding:
+      m_Name: right
+      m_Id: 233f731d-8d73-4761-8879-66c0e0da124d
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/right>
+    bindingName: Menu Controls/Navigate/right
+    inputStyleString: <sprite="XBox" name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/RIGHT">
+    humanReadableString: LEFT STICK/RIGHT
+    humanReadableString_singleInput: LEFT STICK/RIGHT
+  - binding:
+      m_Name: 
+      m_Id: c88534db-dffe-4245-85c8-f41ba53024a1
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Submit>
+    bindingName: Menu Controls/Submit
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+  - binding:
+      m_Name: 
+      m_Id: 6fee8919-99e7-4770-abd4-da1b7d4e4cc4
+      m_Path: '*/{Cancel}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard And Mouse;Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Cancel>
+    bindingName: Menu Controls/Cancel
+    inputStyleString: <sprite="XBox" name="CANCEL">
+    inputStyleString_singleInput: <sprite="XBox" name="CANCEL">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+  - binding:
+      m_Name: 
+      m_Id: f509a7b5-e79a-485e-ba2f-da5431d6fe4c
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Pause
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Pause>
+    bindingName: Menu Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+  TEXTMESHPRO_SPRITEASSET_FOLDERPATH: Assets/TextMesh Pro/Resources/Sprite Assets/
