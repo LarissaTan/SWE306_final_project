@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Slider hunSlider;
     public Slider slider;
     public GameObject huOjb;
+    public GameObject attackObj;
 
     public int HP = 100;
     public int hudun = 100;
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        attackObj.SetActive(false);
         CharacterInit();
         hunSlider.value = hudun;
         slider.value = HP;
@@ -159,7 +161,12 @@ public class Player : MonoBehaviour
     }
 
     private void keyboard(){
-                if (attackCoolDownTimeCount > 0.0f)
+
+        if(attackImage.fillAmount == 0){
+            attackObj.SetActive(false);
+        }
+
+        if (attackCoolDownTimeCount > 0.0f)
         {
             attackCoolDownTimeCount -= Time.deltaTime;
             attackImage.fillAmount = attackCoolDownTimeCount / attackCoolDownTime;
@@ -219,6 +226,7 @@ public class Player : MonoBehaviour
                 // 如果按下J键
         if (Input.GetKeyDown("j"))
         {
+            attackObj.SetActive(true);
             if (attackCoolDownTimeCount <= 0.0f)
             {
                 // attackImage fillamount = 1
@@ -341,7 +349,6 @@ public class Player : MonoBehaviour
         {
             if (attack >= 0.6f)
             {
-
                 attack = 0;
                 animator.SetTrigger("attack");
             }
