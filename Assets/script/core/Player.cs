@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rig;
     public Slider hunSlider;
     public Slider slider;
+    public GameObject huOjb;
 
     public int HP = 100;
     public int hudun = 100;
@@ -54,6 +55,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if(hudun == 0){
+            huOjb.SetActive(false);
+        }
+
         if (attackCoolDownTimeCount > 0.0f)
         {
             attackCoolDownTimeCount -= Time.deltaTime;

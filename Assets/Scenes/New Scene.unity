@@ -6222,6 +6222,7 @@ MonoBehaviour:
   rig: {fileID: 591088283}
   hunSlider: {fileID: 49864347}
   slider: {fileID: 1699024926}
+  huOjb: {fileID: 49864345}
   HP: 100
   hudun: 100
   jump: 0
