@@ -38,7 +38,14 @@ public class snails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isWalk && !isAttack && Time.time - timer > 0.5){
+
+        if(isDead){
+            ani.SetBool("IsDead", true);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            if(Time.time - timer > 1.02)
+                Destroy(this.gameObject);
+        }else{
+            if(!isWalk && !isAttack && Time.time - timer > 0.5){
             isWalk = true;
             ani.SetBool("IsWalk", true);
             timer = Time.time;
@@ -61,11 +68,6 @@ public class snails : MonoBehaviour
             ani.SetBool("IsAttack", false);
             timer = Time.time;
         }
-
-        if(isDead){
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            if(Time.time - timer > 0.45)
-                Destroy(this.gameObject);
         }
     }
 
@@ -91,5 +93,10 @@ public class snails : MonoBehaviour
             return 30;
         else
             return 10;
+    }
+
+    public void kill(){
+        isDead = true;
+        timer = Time.time;
     }
 }

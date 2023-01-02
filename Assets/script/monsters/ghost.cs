@@ -36,9 +36,7 @@ public class ghost : MonoBehaviour
     void Update()
     {
         if(isDead){
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            if(Time.time - timer > 0.45)
-                Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
         
         if(!isAttack){
@@ -81,5 +79,10 @@ public class ghost : MonoBehaviour
             return 30;
         else
             return 10;
+    }
+
+    public void kill(){
+        isDead = true;
+        timer = Time.time;
     }
 }

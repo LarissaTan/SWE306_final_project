@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         {
             huOjb.SetActive(false);
         }
-
+        Debug.Log(attackCoolDownTimeCount);
 
         keyboard();
 
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
         {
             skeletion tmp;
             tmp = collision.gameObject.GetComponent<skeletion>();
-            if(attackCoolDownTimeCount != 0){
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
                 tmp.kill();
             }else{
                 hurtAnimation();
@@ -164,26 +164,35 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "ghost")
         {
-            hurtAnimation();
-            ghost tmp;
-            tmp = collision.gameObject.GetComponent<ghost>();
-            TakeDame(tmp.damage());
+            ghost tmp = collision.gameObject.GetComponent<ghost>();
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+                tmp.kill();
+            }else{
+                hurtAnimation();
+                TakeDame(tmp.damage());
+            }
         }
 
         if (collision.gameObject.tag == "eye")
         {
-            hurtAnimation();
-            eye tmp;
-            tmp = collision.gameObject.GetComponent<eye>();
-            TakeDame(tmp.damage());
+            eye tmp = collision.gameObject.GetComponent<eye>();
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+                tmp.kill();
+            }else{
+                hurtAnimation();
+                TakeDame(tmp.damage());
+            }
         }
 
         if (collision.gameObject.tag == "snail")
         {
-            hurtAnimation();
-            snails tmp;
-            tmp = collision.gameObject.GetComponent<snails>();
-            TakeDame(tmp.damage());
+            snails tmp = collision.gameObject.GetComponent<snails>();
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+                tmp.kill();
+            }else{
+                hurtAnimation();
+                TakeDame(tmp.damage());
+            }
         }
     }
 
