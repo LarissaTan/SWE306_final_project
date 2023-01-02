@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
+    public AudioClip injureSound;
     public Animator animator;
     public Rigidbody2D rig;
     public Slider hunSlider;
@@ -60,7 +61,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(hudun == 0){
+        if (hudun == 0)
+        {
             huOjb.SetActive(false);
         }
 
@@ -90,6 +92,7 @@ public class Player : MonoBehaviour
 
     public void TakeDame(int i)
     {
+        transform.parent.GetComponent<AudioSource>().PlayOneShot(injureSound);
         if (hudun >= i)
         {
             hudun -= i;
@@ -146,7 +149,7 @@ public class Player : MonoBehaviour
             }
         }
 
-           // monster
+        // monster
         if (collision.gameObject.tag == "skeleton")
         {
             hurtAnimation();
@@ -178,13 +181,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void hurtAnimation(){
+    private void hurtAnimation()
+    {
         b.FlashScreen();
     }
 
-    private void keyboard(){
+    private void keyboard()
+    {
 
-        if(attackImage.fillAmount == 0){
+        if (attackImage.fillAmount == 0)
+        {
             attackObj.SetActive(false);
         }
 
@@ -198,7 +204,7 @@ public class Player : MonoBehaviour
         {
             dashCoolDownTimeCount -= Time.deltaTime;
             dashImage.fillAmount = dashCoolDownTimeCount / dashCoolDownTime;
-        } 
+        }
 
         if (dashEffectCoolDownTimeCount > 0.0f)
         {
@@ -245,7 +251,7 @@ public class Player : MonoBehaviour
             isDashing = false;
         }
 
-                // 如果按下J键
+        // 如果按下J键
         if (Input.GetKeyDown("j"))
         {
             attackObj.SetActive(true);
@@ -262,7 +268,7 @@ public class Player : MonoBehaviour
         {
             sImage.fillAmount = 1;
             timer_s = coolTimeKey;
-	    }
+        }
 
         // 如果按下a键
         if (Input.GetKeyDown("a"))
@@ -355,7 +361,7 @@ public class Player : MonoBehaviour
             dashImage.fillAmount = 0;
         }
 
-                jump += Time.deltaTime;
+        jump += Time.deltaTime;
         attack += Time.deltaTime;
         if (Input.GetKeyDown("space"))
         {

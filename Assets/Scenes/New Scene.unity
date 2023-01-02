@@ -6429,6 +6429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4a252ce4263764d98346321526dac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  injureSound: {fileID: 8300000, guid: 8db84446a72a38b43a19a5ce7c4e7993, type: 3}
   animator: {fileID: 591088285}
   rig: {fileID: 591088283}
   hunSlider: {fileID: 49864347}
@@ -8422,7 +8423,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
