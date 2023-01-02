@@ -16,6 +16,8 @@ public class snails : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool isDead = false;
+    private bool isWalk = false;
+    private bool isAttack = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,9 @@ public class snails : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
-        ani.SetBool("IsDie", false);
+        ani.SetBool("IsDead", false);
+        ani.SetBool("IsWalk", false);
+        ani.SetBool("IsAttack", false);
         Xleft = leftpoint.position.x;
         Xright = rightpoint.position.x;
         Destroy(leftpoint.gameObject);
@@ -34,12 +38,31 @@ public class snails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isWalk && !isAttack && Time.time - timer > 0.5){
+            isWalk = true;
+            ani.SetBool("IsWalk", true);
+            movement();
+            timer = Time.time;
+        }
+
+        if(isWalk && Time.time - timer > 1){
+            isAttack = true;
+            isWalk = false;
+            ani.SetBool("IsAttack", true);
+            ani.SetBool("IsWalk", false);
+            timer = Time.time;
+        }
+
+        if(isAttack && Time.time - timer > 0.2){
+            isAttack = false;
+            ani.SetBool("IsAttack", false);
+            timer = Time.time;
+        }
+
         if(isDead){
             rb.velocity = new Vector2(0, rb.velocity.y);
             if(Time.time - timer > 0.45)
                 Destroy(this.gameObject);
-        }else{
-            movement();
         }
     }
 
