@@ -157,17 +157,19 @@ public class Player : MonoBehaviour
 
     public void ReleaseMagic()
     {
-        if (Input.GetKeyDown(KeyCode.U) && Time.time >= m1_timer + MagicCoolDown1) 
+        if (Input.GetKeyDown(KeyCode.U) && Time.time >= m1_timer + MagicCoolDown1 && globe.m1 != 0) 
         {
             shoot();
+            globe.m1--;
             music.clip = m1;
             music.Play();
             m1_timer = Time.time;
             m1_check = true;
         }
-        if (Input.GetKeyDown(KeyCode.I) && Time.time >= m2_timer + MagicCoolDown2) 
+        if (Input.GetKeyDown(KeyCode.I) && Time.time >= m2_timer + MagicCoolDown2 && globe.m2 != 0) 
         {
             Shu();
+            globe.m2--;
             music.clip = m2;
             music.Play();
             m2_timer = Time.time;
