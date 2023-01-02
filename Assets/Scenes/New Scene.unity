@@ -6824,6 +6824,8 @@ MonoBehaviour:
   wImage: {fileID: 1915196793}
   dImage: {fileID: 804829964}
   spaceImage: {fileID: 375035051}
+  m1_img: {fileID: 1327997330}
+  m2_img: {fileID: 1590229597}
   attackCoolDownTime: 0.5
   attackCoolDownTimeCount: 0
   dashImage: {fileID: 1440104191}

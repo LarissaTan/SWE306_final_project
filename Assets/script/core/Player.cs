@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     public Image wImage;
     public Image dImage;
     public Image spaceImage;
+    public Image m1_img;
+    public Image m2_img;
     public float attackCoolDownTime = 0.5f;
     public float attackCoolDownTimeCount = 0.0f;
 
@@ -62,6 +64,8 @@ public class Player : MonoBehaviour
     private float MagicCoolDown2 = 4f;
     private float m1_timer = 0.0f;
     private float m2_timer = 0.0f;
+    private bool m1_check = false;
+    private bool m2_check = false;
 
 
     void Start()
@@ -142,11 +146,13 @@ public class Player : MonoBehaviour
         {
             shoot();
             m1_timer = Time.time;
+            m1_check = true;
         }
         if (Input.GetKeyDown(KeyCode.I) && Time.time >= m2_timer + MagicCoolDown2) 
         {
             Shu();
             m2_timer = Time.time;
+            m2_check = true;
         }
     }
 
@@ -277,6 +283,21 @@ public class Player : MonoBehaviour
 
     private void keyboard()
     {
+        if(m1_check){
+            m1_img.fillAmount = (Time.time - m1_timer)/MagicCoolDown1;
+            if(Time.time - m1_timer >= MagicCoolDown1){
+                m1_check = false;
+                m1_img.fillAmount = 0f;
+            }
+        }
+
+        if(m2_check){
+            m2_img.fillAmount = (Time.time - m2_timer)/MagicCoolDown2;
+            if(Time.time - m2_timer >= MagicCoolDown2){
+                m2_check = false;
+                m1_img.fillAmount = 0f;
+            }
+        }
 
         if (attackImage.fillAmount == 0)
         {
