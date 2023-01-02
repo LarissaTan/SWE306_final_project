@@ -59,88 +59,8 @@ public class Player : MonoBehaviour
             huOjb.SetActive(false);
         }
 
-        if (attackCoolDownTimeCount > 0.0f)
-        {
-            attackCoolDownTimeCount -= Time.deltaTime;
-            attackImage.fillAmount = attackCoolDownTimeCount / attackCoolDownTime;
-        }
 
-        if (dashCoolDownTimeCount > 0.0f)
-        {
-            dashCoolDownTimeCount -= Time.deltaTime;
-            dashImage.fillAmount = dashCoolDownTimeCount / dashCoolDownTime;
-        } 
-
-        if (dashEffectCoolDownTimeCount > 0.0f)
-        {
-            dashEffectCoolDownTimeCount -= Time.deltaTime;
-        }
-
-        if (timer_a > 0.0f)
-        {
-            timer_a -= Time.deltaTime;
-            aImage.fillAmount = timer_a / coolTimeKey;
-        }
-
-        if (timer_s > 0.0f)
-        {
-            timer_s -= Time.deltaTime;
-            sImage.fillAmount = timer_s / coolTimeKey;
-        }
-
-        if (timer_w > 0.0f)
-        {
-            timer_w -= Time.deltaTime;
-            wImage.fillAmount = timer_w / coolTimeKey;
-        }
-
-        if (timer_d > 0.0f)
-        {
-            timer_d -= Time.deltaTime;
-            dImage.fillAmount = timer_d / coolTimeKey;
-        }
-
-        if (timer_space > 0.0f)
-        {
-            timer_space -= Time.deltaTime;
-            spaceImage.fillAmount = timer_space / coolTimeKey;
-        }
-
-        if (dashCoolDownTimeCount <= 0.0f)
-        {
-            isDashing = false;
-        }
-
-        if (dashEffectCoolDownTimeCount <= 0.0f)
-        {
-            isDashing = false;
-        }
-
-
-        // 如果按下J键
-        if (Input.GetKeyDown("j"))
-        {
-            if (attackCoolDownTimeCount <= 0.0f)
-            {
-                // attackImage fillamount = 1
-                attackImage.fillAmount = 1;
-                attackCoolDownTimeCount = attackCoolDownTime;
-            }
-        }
-
-        // 如果按下s键
-        if (Input.GetKeyDown("s"))
-        {
-            sImage.fillAmount = 1;
-            timer_s = coolTimeKey;
-	    }
-
-        // 如果按下a键
-        if (Input.GetKeyDown("a"))
-        {
-            aImage.fillAmount = 1;
-            timer_a = coolTimeKey;
-        }
+        keyboard();
 
         if (Input.GetKeyDown("w"))
         {
@@ -362,6 +282,90 @@ public class Player : MonoBehaviour
 
     private void hurtAnimation(){
 
+    }
+
+    private void keyboard(){
+                if (attackCoolDownTimeCount > 0.0f)
+        {
+            attackCoolDownTimeCount -= Time.deltaTime;
+            attackImage.fillAmount = attackCoolDownTimeCount / attackCoolDownTime;
+        }
+
+        if (dashCoolDownTimeCount > 0.0f)
+        {
+            dashCoolDownTimeCount -= Time.deltaTime;
+            dashImage.fillAmount = dashCoolDownTimeCount / dashCoolDownTime;
+        } 
+
+        if (dashEffectCoolDownTimeCount > 0.0f)
+        {
+            dashEffectCoolDownTimeCount -= Time.deltaTime;
+        }
+
+        if (timer_a > 0.0f)
+        {
+            timer_a -= Time.deltaTime;
+            aImage.fillAmount = timer_a / coolTimeKey;
+        }
+
+        if (timer_s > 0.0f)
+        {
+            timer_s -= Time.deltaTime;
+            sImage.fillAmount = timer_s / coolTimeKey;
+        }
+
+        if (timer_w > 0.0f)
+        {
+            timer_w -= Time.deltaTime;
+            wImage.fillAmount = timer_w / coolTimeKey;
+        }
+
+        if (timer_d > 0.0f)
+        {
+            timer_d -= Time.deltaTime;
+            dImage.fillAmount = timer_d / coolTimeKey;
+        }
+
+        if (timer_space > 0.0f)
+        {
+            timer_space -= Time.deltaTime;
+            spaceImage.fillAmount = timer_space / coolTimeKey;
+        }
+
+        if (dashCoolDownTimeCount <= 0.0f)
+        {
+            isDashing = false;
+        }
+
+        if (dashEffectCoolDownTimeCount <= 0.0f)
+        {
+            isDashing = false;
+        }
+
+                // 如果按下J键
+        if (Input.GetKeyDown("j"))
+        {
+            if (attackCoolDownTimeCount <= 0.0f)
+            {
+                // attackImage fillamount = 1
+                attackImage.fillAmount = 1;
+                attackCoolDownTimeCount = attackCoolDownTime;
+            }
+        }
+
+        // 如果按下s键
+        if (Input.GetKeyDown("s"))
+        {
+            sImage.fillAmount = 1;
+            timer_s = coolTimeKey;
+	    }
+
+        // 如果按下a键
+        if (Input.GetKeyDown("a"))
+        {
+            aImage.fillAmount = 1;
+            timer_a = coolTimeKey;
+        }
     }
 
 
