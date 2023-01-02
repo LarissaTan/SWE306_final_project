@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
         {
             if (HP != 100 && HP + 1 <= 100)
             {
-                HP++;
+                HP += 10;
                 slider.value = HP;
                 collision.gameObject.SetActive(false);
             }
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
         {
             if (HP != 100 && HP + 5 <= 100)
             {
-                HP += 5;
+                HP += 30;
                 slider.value = HP;
                 collision.gameObject.SetActive(false);
             }
