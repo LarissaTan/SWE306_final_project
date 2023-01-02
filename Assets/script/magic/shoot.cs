@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
-    public Rigidbody2D rbody;
-    //public Transform BulletPoint;
-
+    private Rigidbody2D rbody;
     private float timer = 0;
 
 
     void Start(){
         Debug.Log("this is created");
+        rbody = GetComponent<Rigidbody2D>();
         timer = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if(Time.time - timer > 0.4)
-        //     Destroy(this.gameObject);
+        if(Time.time - timer > 2)
+            Destroy(this.gameObject);
 
         if(this.gameObject.transform.localScale.x > 0)
             transform.Translate(Vector2.right*30f*Time.deltaTime);

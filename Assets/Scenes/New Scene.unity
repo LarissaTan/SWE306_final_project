@@ -1668,7 +1668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161458461
 GameObject:
@@ -6726,7 +6726,7 @@ MonoBehaviour:
   endpanel:
   - {fileID: 373289294}
   - {fileID: 725772431}
-  BulletPerfabs: {fileID: 2142195136}
+  BulletPerfabs: {fileID: 8011522093725009417, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
   BulletPoint: {fileID: 403259328}
   faceLastPosition: 1
   moveHorizontal: 0
@@ -17874,7 +17874,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793280116
 GameObject:
@@ -22786,11 +22786,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133459915}
   m_CullTransparentMesh: 0
---- !u!1 &2142195136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8011522093725009417, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-  m_PrefabInstance: {fileID: 8011522093898468297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6203476374569775485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22856,64 +22851,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b3d7ce8c0b6e94e869771af563374b, type: 3}
---- !u!1001 &8011522093898468297
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8011522093725009417, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_Name
-      value: fireball
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.9637251
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009418, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011522093725009420, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
-      propertyPath: BulletPoint
-      value: 
-      objectReference: {fileID: 403259328}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e0286c4d524274be5ba3bc1b1a440abf, type: 3}
