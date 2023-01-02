@@ -17,5 +17,26 @@ namespace LayerLab
         {
             for (int i = 0; i < otherPanels.Length; i++) otherPanels[i].SetActive(false);
         }
+
+        public void OpenShop()
+        {
+            Time.timeScale = 0;
+            transform.Find("Popup_shop").gameObject.SetActive(true);
+        }
+        public void CloseShop()
+        {
+            Time.timeScale = 1;
+            transform.Find("Popup_shop").gameObject.SetActive(false);
+        }
+        public void OpenSetting()
+        {
+            Time.timeScale = 0;
+            transform.Find("Popup_Settings").gameObject.SetActive(true);
+        }
+        public void CloseSetting()
+        {
+            Time.timeScale = 1;
+            transform.Find("Popup_Settings").gameObject.SetActive(false);
+        }
     }
 }
