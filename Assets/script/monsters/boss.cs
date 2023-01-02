@@ -26,6 +26,8 @@ public class boss : MonoBehaviour
     private float Xleft, Xright;
     private float IsFaceRight = 0;
 
+    private int status = 0;
+
     void Start()
     {
         timer = Time.time;
@@ -48,7 +50,35 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if()
+        if(isDie){
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            if(Time.time - timer > 1.02)
+                Destroy(this.gameObject);
+        }else{
+            if(isIdle && Time.time - timer > 0.5){
+                isIdle = false;
+                animator.SetBool("IsIdle", false);
+                switch (status){
+                    case 0:
+                        isRun =  true;
+                        animator.SetBool("IsRun", true);
+                        break;
+                    case 1:
+                        isAttack = true;
+                        animator.SetBool("IsAttack", true);
+                        break;
+                    default:
+                        break;
+                }
+                status++;
+                timer = Time.time;
+                if(status == 2)   status = 0;
+            }
+        }
+
+        action();
+
+
         
     }
 
@@ -66,6 +96,16 @@ public class boss : MonoBehaviour
                 transform.localScale = new Vector3(2,2,1);
                 IsFaceRight = 1;
             }
+        }
+    }
+
+    void action(){
+        if(isRun && Time.time - timer > 3){
+            isRun = false;
+            animator.SetBool("IsRun", false);
+            isIdle = true;
+            animator.SetBool("IsIdle", true);
+            timer = Time.time;
         }
     }
 }
