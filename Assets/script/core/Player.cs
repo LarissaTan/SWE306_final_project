@@ -344,10 +344,20 @@ public class Player : MonoBehaviour
                 collision.gameObject.SetActive(false);
             }
         }
+
+           // monster
+        if (collision.gameObject.tag == "skeleton")
+        {
+            hurtAnimation();
+            skeletion tmp;
+            tmp = collision.gameObject.GetComponent<skeletion>();
+            TakeDame(10);
+        }
     }
 
-    public void sKey(){
-        sImage.fillAmount = 1;
+    private void hurtAnimation(){
+
     }
+
 
 }
