@@ -20,8 +20,8 @@ public class boss : MonoBehaviour
     public bool isAngry = false;
     private bool isDie = false;
     private bool isHurt = false;
-    private bool isRun = false;
-    private bool isIdle = false;
+    public bool isRun = false;
+    public bool isIdle = true;
 
     private float Xleft, Xright;
     private float IsFaceRight = 0;
@@ -50,12 +50,14 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isRun)   Movement();
+        else        rb.velocity = new Vector2(0, 0);
+
         if(isDie){
-            rb.velocity = new Vector2(0, rb.velocity.y);
             if(Time.time - timer > 1.02)
                 Destroy(this.gameObject);
         }else{
-            if(isIdle && Time.time - timer > 0.5){
+            if(isIdle && Time.time - timer > 0.1){
                 isIdle = false;
                 animator.SetBool("IsIdle", false);
                 switch (status){
@@ -85,13 +87,13 @@ public class boss : MonoBehaviour
     void Movement(){
         if(IsFaceRight == 1)
         {
-            rb.velocity = new Vector2(Speed, rb.velocity.y);
+            rb.velocity = new Vector2(Speed, 0);
             if(transform.position.x > Xright){
                 transform.localScale = new Vector3(-2,2,1);
                 IsFaceRight = 0;
             }
         }else if (IsFaceRight != 1){
-            rb.velocity = new Vector2(-Speed, rb.velocity.y);
+            rb.velocity = new Vector2(-Speed, 0);
             if(transform.position.x < Xleft){
                 transform.localScale = new Vector3(2,2,1);
                 IsFaceRight = 1;
@@ -103,6 +105,14 @@ public class boss : MonoBehaviour
         if(isRun && Time.time - timer > 3){
             isRun = false;
             animator.SetBool("IsRun", false);
+            isIdle = true;
+            animator.SetBool("IsIdle", true);
+            timer = Time.time;
+        }
+
+        if(isAttack && Time.time - timer > 0.7){
+            isAttack = false;
+            animator.SetBool("IsAttack", false);
             isIdle = true;
             animator.SetBool("IsIdle", true);
             timer = Time.time;
