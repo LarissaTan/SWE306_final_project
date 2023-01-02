@@ -21,7 +21,7 @@ public class medicine : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            audioSource.volume = 1f;
+            audioSource.volume = 0.6f;
             audioSource.PlayOneShot(audio);
 
             Destroy(gameObject);
