@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LayerLab
 {
@@ -37,6 +38,11 @@ namespace LayerLab
         {
             Time.timeScale = 1;
             transform.Find("Popup_Settings").gameObject.SetActive(false);
+        }
+
+        public void returnMenu()
+        {
+            SceneManager.LoadScene("menu");
         }
     }
 }
