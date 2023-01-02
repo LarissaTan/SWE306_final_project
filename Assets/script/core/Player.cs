@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     public float dashEffectCoolDownTime = 0.02f;
     public float dashEffectCoolDownTimeCount = 0.0f;
 
-    private float coolTimeKey = 0.05f;
+    private float coolTimeKey = 0.1f;
     private float timer_a = 0.0f;
     private float timer_s = 0.0f;
     private float timer_w = 0.0f;
@@ -61,135 +61,6 @@ public class Player : MonoBehaviour
 
 
         keyboard();
-
-        if (Input.GetKeyDown("w"))
-        {
-            wImage.fillAmount = 1;
-            timer_w = coolTimeKey;
-        }
-
-        if (Input.GetKeyDown("d"))
-        {
-            dImage.fillAmount = 1;
-            timer_d = coolTimeKey;
-        }
-
-        if (Input.GetKeyDown("space"))
-        {
-            spaceImage.fillAmount = 1;
-            timer_space = coolTimeKey;
-        }
-
-        if (Input.GetKeyDown("k"))
-        {
-            if (dashCoolDownTimeCount <= 0.0f)
-            {
-                dashImage.fillAmount = 1;
-                dashCoolDownTimeCount = dashCoolDownTime;
-                dashEffectCoolDownTimeCount = dashEffectCoolDownTime;
-
-                // dash
-                float moveHorizontal = Input.GetAxis("Horizontal");
-                rig.velocity = new Vector2(moveHorizontal * 1700.0f * Time.fixedDeltaTime, 0);
-                // Pool.instance.GetFromPool();
-                isDashing = true;
-            }
-        }
-
-        if (isDashing)
-        {
-            Pool.instance.GetFromPool();
-            dashImageCount--;
-        }
-
-        if (Input.GetKeyUp("j"))
-        {
-            Debug.Log("attack");
-            attackImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("k"))
-        {
-            Debug.Log("dash");
-            dashImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("s"))
-        {
-            Debug.Log("s");
-            dashImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("a"))
-        {
-            Debug.Log("a");
-            dashImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("w"))
-        {
-            Debug.Log("w");
-            dashImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("d"))
-        {
-            Debug.Log("d");
-            dashImage.fillAmount = 0;
-        }
-
-        if (Input.GetKeyUp("space"))
-        {
-            Debug.Log("space");
-            dashImage.fillAmount = 0;
-        }
-
-
-
-        jump += Time.deltaTime;
-        attack += Time.deltaTime;
-        if (Input.GetKeyDown("space"))
-        {
-
-            if (jump >= 1)
-            {
-                jump = 0;
-                rig.AddForce(Vector2.up * 1000);
-            }
-        }
-
-        if (Input.GetKeyDown("j"))
-        {
-            if (attack >= 0.6f)
-            {
-
-                attack = 0;
-                animator.SetTrigger("attack");
-            }
-        }
-
-        if (Input.GetKey("a") || Input.GetKey("d"))
-        {
-
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }
-
-        if (Input.GetKey("a"))
-        {
-            transform.position += new Vector3(-0.03f, 0, 0);
-            transform.localScale = new Vector3(1, 1, 1);
-
-        }
-
-        if (Input.GetKey("d"))
-        {
-            transform.position += new Vector3(0.03f, 0, 0);
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
 
     }
 
@@ -366,6 +237,136 @@ public class Player : MonoBehaviour
             aImage.fillAmount = 1;
             timer_a = coolTimeKey;
         }
+
+
+        if (Input.GetKeyDown("w"))
+        {
+            wImage.fillAmount = 1;
+            timer_w = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("d"))
+        {
+            dImage.fillAmount = 1;
+            timer_d = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            spaceImage.fillAmount = 1;
+            timer_space = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("k"))
+        {
+            if (dashCoolDownTimeCount <= 0.0f)
+            {
+                dashImage.fillAmount = 1;
+                dashCoolDownTimeCount = dashCoolDownTime;
+                dashEffectCoolDownTimeCount = dashEffectCoolDownTime;
+
+                // dash
+                float moveHorizontal = Input.GetAxis("Horizontal");
+                rig.velocity = new Vector2(moveHorizontal * 1700.0f * Time.fixedDeltaTime, 0);
+                // Pool.instance.GetFromPool();
+                isDashing = true;
+            }
+        }
+
+        if (isDashing)
+        {
+            Pool.instance.GetFromPool();
+            dashImageCount--;
+        }
+
+        if (Input.GetKeyUp("j"))
+        {
+            Debug.Log("attack");
+            attackImage.fillAmount = 0;
+        }
+
+
+        if (Input.GetKeyUp("k"))
+        {
+            Debug.Log("dash");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("s"))
+        {
+            Debug.Log("s");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("a"))
+        {
+            Debug.Log("a");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("w"))
+        {
+            Debug.Log("w");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("d"))
+        {
+            Debug.Log("d");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("space"))
+        {
+            Debug.Log("space");
+            dashImage.fillAmount = 0;
+        }
+
+                jump += Time.deltaTime;
+        attack += Time.deltaTime;
+        if (Input.GetKeyDown("space"))
+        {
+
+            if (jump >= 1)
+            {
+                jump = 0;
+                rig.AddForce(Vector2.up * 1000);
+            }
+        }
+
+        if (Input.GetKeyDown("j"))
+        {
+            if (attack >= 0.6f)
+            {
+
+                attack = 0;
+                animator.SetTrigger("attack");
+            }
+        }
+
+        if (Input.GetKey("a") || Input.GetKey("d"))
+        {
+
+            animator.SetBool("Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
+
+        if (Input.GetKey("a"))
+        {
+            transform.position += new Vector3(-0.03f, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
+
+        }
+
+        if (Input.GetKey("d"))
+        {
+            transform.position += new Vector3(0.03f, 0, 0);
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
     }
 
 
