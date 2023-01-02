@@ -26,7 +26,7 @@ public class snails : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
-        ani.SetBool("IsDeath", false);
+        ani.SetBool("IsDead", false);
         ani.SetBool("IsWalk", false);
         ani.SetBool("IsAttack", false);
         Xleft = leftpoint.position.x;
@@ -41,9 +41,10 @@ public class snails : MonoBehaviour
         if(!isWalk && !isAttack && Time.time - timer > 0.5){
             isWalk = true;
             ani.SetBool("IsWalk", true);
-            movement();
             timer = Time.time;
         }
+
+        if(isWalk)  movement();
 
         if(isWalk && Time.time - timer > 1){
             rb.velocity = new Vector2(0, rb.velocity.y);

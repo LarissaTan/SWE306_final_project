@@ -38,14 +38,13 @@ public class eye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Xleft);
-        Debug.Log(Xright);
         if(!isWalk && !isAttack && Time.time - timer > 0.5){
             isWalk = true;
             ani.SetBool("IsWalk", true);
-            movement();
             timer = Time.time;
         }
+
+        if(isWalk)  movement();
 
         if(isWalk && Time.time - timer > 3){
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -71,18 +70,26 @@ public class eye : MonoBehaviour
     }
 
      void movement(){
+
+        Debug.Log("x = " + transform.position.x);
+            Debug.Log("Xright = " + Xright);
+            Debug.Log("Xleft = " + Xleft);
         if(IsFaceRight == 1)
         {
+            Debug.Log("face right");
             rb.velocity = new Vector2(Speed, rb.velocity.y);
             if(transform.position.x >= Xright){
                 transform.localScale = new Vector3(2f,2f,1);
                 IsFaceRight = 0;
+                   Debug.Log(IsFaceRight);
             }
         }else if (IsFaceRight != 1){
+            Debug.Log("face left");
             rb.velocity = new Vector2(-Speed, rb.velocity.y);
             if(transform.position.x <= Xleft){
                 transform.localScale = new Vector3(-2f,2f,1);
                 IsFaceRight = 1;
+                 Debug.Log(IsFaceRight);
             }
         }
     }
