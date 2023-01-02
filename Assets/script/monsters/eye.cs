@@ -70,10 +70,6 @@ public class eye : MonoBehaviour
     }
 
      void movement(){
-
-        Debug.Log("x = " + transform.position.x);
-            Debug.Log("Xright = " + Xright);
-            Debug.Log("Xleft = " + Xleft);
         if(IsFaceRight == 1)
         {
             Debug.Log("face right");

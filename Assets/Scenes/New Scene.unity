@@ -6227,6 +6227,11 @@ MonoBehaviour:
   jump: 0
   attack: 0
   attackImage: {fileID: 1931404948}
+  aImage: {fileID: 481659511}
+  sImage: {fileID: 2091469570}
+  wImage: {fileID: 1915196793}
+  dImage: {fileID: 804829964}
+  spaceImage: {fileID: 375035051}
   attackCoolDownTime: 0.5
   attackCoolDownTimeCount: 0
   dashImage: {fileID: 1440104191}

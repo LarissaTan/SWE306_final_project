@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
     public float attack;
 
     public Image attackImage;
+    public Image aImage;
+    public Image sImage;
+    public Image wImage;
+    public Image dImage;
+    public Image spaceImage;
     public float attackCoolDownTime = 0.5f;
     public float attackCoolDownTimeCount = 0.0f;
 
@@ -25,6 +30,13 @@ public class Player : MonoBehaviour
     public float dashCoolDownTimeCount = 0.0f;
     public float dashEffectCoolDownTime = 0.02f;
     public float dashEffectCoolDownTimeCount = 0.0f;
+
+    private float coolTimeKey = 0.05f;
+    private float timer_a = 0.0f;
+    private float timer_s = 0.0f;
+    private float timer_w = 0.0f;
+    private float timer_d = 0.0f;
+    private float timer_space = 0.0f;
 
     public int dashImageCount = 20;
 
@@ -59,6 +71,36 @@ public class Player : MonoBehaviour
             dashEffectCoolDownTimeCount -= Time.deltaTime;
         }
 
+        if (timer_a > 0.0f)
+        {
+            timer_a -= Time.deltaTime;
+            aImage.fillAmount = timer_a / coolTimeKey;
+        }
+
+        if (timer_s > 0.0f)
+        {
+            timer_s -= Time.deltaTime;
+            sImage.fillAmount = timer_s / coolTimeKey;
+        }
+
+        if (timer_w > 0.0f)
+        {
+            timer_w -= Time.deltaTime;
+            wImage.fillAmount = timer_w / coolTimeKey;
+        }
+
+        if (timer_d > 0.0f)
+        {
+            timer_d -= Time.deltaTime;
+            wImage.fillAmount = timer_d / coolTimeKey;
+        }
+
+        if (timer_space > 0.0f)
+        {
+            timer_space -= Time.deltaTime;
+            wImage.fillAmount = timer_space / coolTimeKey;
+        }
+
         if (dashCoolDownTimeCount <= 0.0f)
         {
             isDashing = false;
@@ -79,6 +121,38 @@ public class Player : MonoBehaviour
                 attackImage.fillAmount = 1;
                 attackCoolDownTimeCount = attackCoolDownTime;
             }
+        }
+
+        // 如果按下s键
+        if (Input.GetKeyDown("s"))
+        {
+            sImage.fillAmount = 1;
+            timer_s = coolTimeKey;
+	    }
+
+        // 如果按下a键
+        if (Input.GetKeyDown("a"))
+        {
+            aImage.fillAmount = 1;
+            timer_a = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("w"))
+        {
+            wImage.fillAmount = 1;
+            timer_w = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("d"))
+        {
+            dImage.fillAmount = 1;
+            timer_d = coolTimeKey;
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            spaceImage.fillAmount = 1;
+            timer_space = coolTimeKey;
         }
 
         if (Input.GetKeyDown("k"))
@@ -112,6 +186,36 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp("k"))
         {
             Debug.Log("dash");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("s"))
+        {
+            Debug.Log("s");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("a"))
+        {
+            Debug.Log("a");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("w"))
+        {
+            Debug.Log("w");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("d"))
+        {
+            Debug.Log("d");
+            dashImage.fillAmount = 0;
+        }
+
+        if (Input.GetKeyUp("space"))
+        {
+            Debug.Log("space");
             dashImage.fillAmount = 0;
         }
 
@@ -240,6 +344,10 @@ public class Player : MonoBehaviour
                 collision.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void sKey(){
+        sImage.fillAmount = 1;
     }
 
 }
