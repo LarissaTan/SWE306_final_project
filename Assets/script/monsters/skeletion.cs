@@ -34,9 +34,10 @@ public class skeletion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isDead){
+        if(isDead ){
+            ani.SetBool("IsDead", true);
             rb.velocity = new Vector2(0, rb.velocity.y);
-            if(Time.time - timer > 0.45)
+            if(Time.time - timer > 0.4)
                 Destroy(this.gameObject);
         }else{
             movement();
@@ -58,5 +59,10 @@ public class skeletion : MonoBehaviour
                 IsFaceRight = 1;
             }
         }
+    }
+
+    public void kill(){
+        isDead = true;
+        timer = Time.time;
     }
 }

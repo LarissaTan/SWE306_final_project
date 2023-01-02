@@ -152,8 +152,14 @@ public class Player : MonoBehaviour
         // monster
         if (collision.gameObject.tag == "skeleton")
         {
-            hurtAnimation();
-            TakeDame(10);
+            skeletion tmp;
+            tmp = collision.gameObject.GetComponent<skeletion>();
+            if(attackCoolDownTimeCount != 0){
+                tmp.kill();
+            }else{
+                hurtAnimation();
+                TakeDame(10);
+            }
         }
 
         if (collision.gameObject.tag == "ghost")
