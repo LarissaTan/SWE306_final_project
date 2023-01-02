@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coins : MonoBehaviour
+public class medicine : MonoBehaviour
 {
-    public int addNum = 1;
-    public AudioClip small;
-    public AudioClip large;
+    public AudioClip audio;
+
     private AudioSource audioSource;
 
 
@@ -21,19 +20,9 @@ public class Coins : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            globe.coins += addNum;
-            // gameObject.SetActive(false);
-            if (addNum == 1)
-            {
-                audioSource.volume = 0.6f;
-                audioSource.PlayOneShot(small);
-            }
 
-            else
-            {
-                audioSource.volume = 1f;
-                audioSource.PlayOneShot(large);
-            }
+            audioSource.volume = 1f;
+            audioSource.PlayOneShot(audio);
 
             Destroy(gameObject);
         }
