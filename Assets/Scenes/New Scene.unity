@@ -21374,6 +21374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 6203476374080513173, guid: d8b3d7ce8c0b6e94e869771af563374b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6203476374080513174, guid: d8b3d7ce8c0b6e94e869771af563374b, type: 3}
       propertyPath: activeTime
       value: 0.3
