@@ -92,13 +92,13 @@ public class Player : MonoBehaviour
         if (timer_d > 0.0f)
         {
             timer_d -= Time.deltaTime;
-            wImage.fillAmount = timer_d / coolTimeKey;
+            dImage.fillAmount = timer_d / coolTimeKey;
         }
 
         if (timer_space > 0.0f)
         {
             timer_space -= Time.deltaTime;
-            wImage.fillAmount = timer_space / coolTimeKey;
+            spaceImage.fillAmount = timer_space / coolTimeKey;
         }
 
         if (dashCoolDownTimeCount <= 0.0f)
