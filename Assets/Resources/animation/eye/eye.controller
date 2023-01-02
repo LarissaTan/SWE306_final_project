@@ -92,19 +92,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsDeath
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -157,24 +157,24 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -5912418449259720722}
-    m_Position: {x: 500, y: 0, z: 0}
+    m_Position: {x: 1890, y: 370, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 275955495551434871}
-    m_Position: {x: 610, y: -90, z: 0}
+    m_Position: {x: 2070, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1118775453441399566}
-    m_Position: {x: 710, y: 50, z: 0}
+    m_Position: {x: 2440, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6500052887036345476}
-    m_Position: {x: 600, y: 190, z: 0}
+    m_Position: {x: 2020, y: 500, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 350, y: 20, z: 0}
-  m_EntryPosition: {x: 350, y: 120, z: 0}
-  m_ExitPosition: {x: 890, y: -100, z: 0}
+  m_AnyStatePosition: {x: 1770, y: 330, z: 0}
+  m_EntryPosition: {x: 1790, y: 470, z: 0}
+  m_ExitPosition: {x: 2400, y: 410, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -5912418449259720722}
 --- !u!1102 &1118775453441399566
@@ -301,8 +301,8 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.7058823
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
   m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1

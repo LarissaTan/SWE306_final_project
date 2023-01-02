@@ -26,7 +26,7 @@ public class eye : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
-        ani.SetBool("IsDead", false);
+        ani.SetBool("IsDeath", false);
         ani.SetBool("IsWalk", false);
         ani.SetBool("IsAttack", false);
         Xleft = leftpoint.position.x;
@@ -40,7 +40,6 @@ public class eye : MonoBehaviour
     {
 
         if(isDead){
-            ani.SetBool("IsDead", true);
             rb.velocity = new Vector2(0, rb.velocity.y);
             if(Time.time - timer > 0.55)
                 Destroy(this.gameObject);
@@ -99,6 +98,7 @@ public class eye : MonoBehaviour
 
     public void kill(){
         isDead = true;
+        ani.SetBool("IsDeath", true);
         timer = Time.time;
     }
 }

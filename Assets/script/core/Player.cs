@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
         {
             skeletion tmp;
             tmp = collision.gameObject.GetComponent<skeletion>();
-            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.07f){
                 tmp.kill();
             }else{
                 hurtAnimation();
@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "ghost")
         {
             ghost tmp = collision.gameObject.GetComponent<ghost>();
-            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.07f){
                 tmp.kill();
             }else{
                 hurtAnimation();
@@ -176,7 +176,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "eye")
         {
             eye tmp = collision.gameObject.GetComponent<eye>();
-            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.07f){
                 tmp.kill();
             }else{
                 hurtAnimation();
@@ -187,7 +187,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "snail")
         {
             snails tmp = collision.gameObject.GetComponent<snails>();
-            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.06f){
+            if(attackCoolDownTimeCount < 0.2f && attackCoolDownTimeCount > 0.07f){
                 tmp.kill();
             }else{
                 hurtAnimation();
