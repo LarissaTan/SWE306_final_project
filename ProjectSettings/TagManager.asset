@@ -9,6 +9,8 @@ TagManager:
   - End
   - bandage
   - kit
+  - skeleton
+  - snail
   layers:
   - Default
   - TransparentFX
