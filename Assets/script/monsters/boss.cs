@@ -107,8 +107,6 @@ public class boss : MonoBehaviour
     void light(){
         music.clip = skill;
         music.Play();
-
-        //lp1.transform.position = new Vector3(lp1.transform.position.x + 73, lp1.transform.position.y - 0.38f, lp1.transform.position.z);
         Instantiate(l, lp1.position, lp1.rotation);
         Instantiate(l, lp2.position, lp2.rotation);
         Instantiate(l, lp3.position, lp3.rotation);
@@ -163,7 +161,8 @@ public class boss : MonoBehaviour
     }
 
     public void getHurt(int i){
-        Debug.Log("hurting");
+        music.clip = hurt;
+        music.Play();
         isAngry = true;
         isHurt = true;
         animator.SetBool("IsHurt", true);
