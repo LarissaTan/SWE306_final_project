@@ -13,8 +13,6 @@ public class boss : MonoBehaviour
 
     public GameObject l1, l2, l3, l4;
     public Transform lp1, lp2, lp3, lp4;
-    public Transform Pmain;
-
     private float timer = 0;
     private float tmp_timer = 0;
     private Rigidbody2D rb;
