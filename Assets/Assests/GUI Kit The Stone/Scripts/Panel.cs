@@ -49,6 +49,7 @@ namespace LayerLab
         public void buyBandage(){
             if(globe.coins < 1){
                 error.SetActive(true);
+                globe.error_status = true;
             }else{
                 globe.coins --;
                 if(Player.HP != 100)

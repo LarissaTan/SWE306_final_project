@@ -16,6 +16,10 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI m2_txt;
     public GameObject m2;
 
+    public GameObject error;
+    private bool check = false;
+    private float timer = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,18 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(globe.error_status && !check){
+            Debug.Log("here is working");
+            timer = Time.time;
+            check = true;
+        }
+
+        if(Time.time - timer > 2){
+            check = false;
+            globe.error_status = false;
+            error.SetActive(false);
+        }
+
         coin_num.text = globe.coins.ToString();
         m1_txt.text = globe.m1.ToString();
         m2_txt.text = globe.m2.ToString();
