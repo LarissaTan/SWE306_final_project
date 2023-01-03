@@ -16,7 +16,6 @@ public class boss : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool isAttack = false;
-    public bool isSkill = false;
     public bool isAngry = false;
     private bool isDie = false;
     private bool isHurt = false;
@@ -123,6 +122,9 @@ public class boss : MonoBehaviour
 
         if(isAttack && Time.time - timer > 0.7){
             isAttack = false;
+            if(isAngry){
+
+            }
             animator.SetBool("IsAttack", false);
             isIdle = true;
             animator.SetBool("IsIdle", true);
@@ -138,8 +140,10 @@ public class boss : MonoBehaviour
     }
 
     public void getHurt(int i){
+        isAngry = true;
         isHurt = true;
         animator.SetBool("IsHurt", true);
+        animator.SetBool("IsAngry", true);
         timer = Time.time;
         bar.damage(i);
     }
