@@ -40,6 +40,7 @@ namespace LayerLab
             Time.timeScale = 1;
             transform.Find("Popup_shop").gameObject.SetActive(false);
         }
+
         public void OpenSetting()
         {
             Time.timeScale = 0;
@@ -54,6 +55,9 @@ namespace LayerLab
         public void returnMenu()
         {
             SceneManager.LoadScene("menu");
+            globe.coins = 0;
+            globe.m1 = 0;
+            globe.m2 = 0;
         }
 
         public void buyBandage(){

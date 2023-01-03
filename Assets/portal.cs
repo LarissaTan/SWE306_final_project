@@ -9,6 +9,10 @@ public class portal : MonoBehaviour
     public Transform player;
     public bool inPortal;
 
+    public GameObject tip;
+    private float timer = 0f;
+    private bool isTip = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,10 @@ public class portal : MonoBehaviour
                 currentLocation.position = teleportLocation.position;
             }
         }
+
+        if(isTip && Time.time - timer > 1){
+            tip.SetActive(false);
+        }
     }
 
 
@@ -36,10 +44,8 @@ public class portal : MonoBehaviour
         Debug.Log(myCollider2d.gameObject.name);
         if (myCollider2d.gameObject.CompareTag("Player"))
         {
-
+            tip.SetActive(true);
             inPortal = true;
-            // GameObject portalDialog = GameObject.Find("Canvas (1)").transform.Find("PortalDialog").gameObject;
-            // portalDialog.SetActive(true);
         }
     }
 

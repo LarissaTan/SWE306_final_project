@@ -35,6 +35,9 @@ public class boss : MonoBehaviour
     public AudioClip skill;
     public AudioClip hurt;
 
+    public GameObject win;
+    public GameObject tip;
+
     void Start()
     {
         timer = Time.time;
@@ -62,8 +65,23 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isRun)   Movement();
+        if(bar.healthLevel() <= 0){
+            animator.SetBool("IsDead", true);
+            isDie = true;
+            timer = Time.time;
+        }
+
+        if(isRun && !isDie)   Movement();
         else        rb.velocity = new Vector2(0, 0);
+
+        if(isDie && Time.time - timer > 1){
+            animator.SetBool("IsDead", false);
+            win.SetActive(true);
+            Destroy(this.gameObject);
+        }{
+
+        
+        
 
         if(isHurt){
             if(Time.time - timer > 0.03){
@@ -99,6 +117,8 @@ public class boss : MonoBehaviour
         }
 
         action();
+
+        }
 
 
         
