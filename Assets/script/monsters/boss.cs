@@ -150,7 +150,7 @@ public class boss : MonoBehaviour
             timer = Time.time;
         }
 
-        if(isAngry && isAttack && Time.time - timer > 0.7) light();
+        if(isAngry && isAttack && Time.time - timer > 0.2) light();
     }
 
     public int damage(){

@@ -17,7 +17,7 @@ public class meteor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time - timer > 1.2f)
+        if(Time.time - timer > 0.4f)
             Destroy(this.gameObject);
     }
 
