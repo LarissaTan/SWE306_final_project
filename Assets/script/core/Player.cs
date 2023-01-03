@@ -99,7 +99,6 @@ public class Player : MonoBehaviour
         {
             huOjb.SetActive(false);
         }
-        Debug.Log(attackCoolDownTimeCount);
 
         keyboard();
 

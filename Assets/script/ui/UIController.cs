@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
 
     public GameObject error;
     private bool check = false;
-    private float timer = 0f;
+    private int timer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +32,13 @@ public class UIController : MonoBehaviour
     void Update()
     {
         if(globe.error_status && !check){
-            Debug.Log("here is working");
-            timer = Time.time;
+            timer = 0;
             check = true;
         }
 
-        if(Time.time - timer > 2){
+        if(check)   timer++;
+
+        if(timer >= 800 && check){
             check = false;
             globe.error_status = false;
             error.SetActive(false);
