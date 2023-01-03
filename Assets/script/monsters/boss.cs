@@ -156,6 +156,8 @@ public class boss : MonoBehaviour
     public int damage(){
         if(isAttack)
             return 40;
+        else if(isAttack && isAngry)
+            return 50;
         else
             return 20;
     }
