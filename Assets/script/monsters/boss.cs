@@ -11,6 +11,10 @@ public class boss : MonoBehaviour
     [SerializeField] protected Animator animator;
     public Collider2D myCollider;
 
+    public GameObject l1, l2, l3, l4;
+    public Transform lp1, lp2, lp3, lp4;
+    public Transform Pmain;
+
     private float timer = 0;
     private float tmp_timer = 0;
     private Rigidbody2D rb;
@@ -27,6 +31,11 @@ public class boss : MonoBehaviour
 
     private int status = 0;
     public HealthBar bar;
+
+    [Header("audio")]
+    public AudioSource music;
+    public AudioClip skill;
+    public AudioClip hurt;
 
     void Start()
     {
@@ -46,6 +55,10 @@ public class boss : MonoBehaviour
         animator.SetBool("IsIdle", true);
         animator.SetBool("IsAngry", false);
         animator.SetBool("IsSkill", false);
+
+        music = gameObject.AddComponent<AudioSource>();
+        skill = Resources.Load<AudioClip>("music/skill");
+        hurt = Resources.Load<AudioClip>("music/boss_hurt");
     }
 
     // Update is called once per frame
@@ -77,6 +90,7 @@ public class boss : MonoBehaviour
                     case 1:
                         isAttack = true;
                         animator.SetBool("IsAttack", true);
+                        if(isAngry)    light();
                         break;
                     default:
                         break;
@@ -91,6 +105,16 @@ public class boss : MonoBehaviour
 
 
         
+    }
+
+    void light(){
+        music.clip = skill;
+        music.Play();
+
+        Instantiate(l1, lp1.position, lp1.rotation);
+        Instantiate(l2, lp2.position, lp2.rotation);
+        Instantiate(l3, lp3.position, lp3.rotation);
+        Instantiate(l4, lp4.position, lp4.rotation);
     }
 
     void Movement(){
@@ -120,11 +144,8 @@ public class boss : MonoBehaviour
             timer = Time.time;
         }
 
-        if(isAttack && Time.time - timer > 0.7){
+        if(isAttack && Time.time - timer > 1.1){
             isAttack = false;
-            if(isAngry){
-
-            }
             animator.SetBool("IsAttack", false);
             isIdle = true;
             animator.SetBool("IsIdle", true);
