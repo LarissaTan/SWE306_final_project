@@ -56,5 +56,38 @@ namespace LayerLab
                     Player.HP +=10;
             }
         }
+
+        public void buyKit(){
+            if(globe.coins < 5){
+                error.SetActive(true);
+                globe.error_status = true;
+            }else{
+                globe.coins -= 5;
+                if(Player.HP < 50)
+                    Player.HP +=50;
+                else
+                    Player.HP = 100;
+            }
+        }
+
+        public void buyM1(){
+            if(globe.coins < 5){
+                error.SetActive(true);
+                globe.error_status = true;
+            }else{
+                globe.coins -= 5;
+                globe.m1++;
+            }
+        }
+
+        public void buyM2(){
+            if(globe.coins < 5){
+                error.SetActive(true);
+                globe.error_status = true;
+            }else{
+                globe.coins -= 5;
+                globe.m2++;
+            }
+        }
     }
 }
