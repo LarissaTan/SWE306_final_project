@@ -3188,6 +3188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPanels: []
   error: {fileID: 95669420}
+  shop: {fileID: 8300000, guid: c1c146a32822544c5bb19e19b8d6ae8b, type: 3}
+  music: {fileID: 809413171}
 --- !u!114 &270105249
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,16 @@ namespace LayerLab
         [SerializeField] private GameObject[] otherPanels;
         public GameObject error;
 
+        [Header("audio")]
+        public AudioClip shop;
+        public AudioSource music;
+
+        void Start(){
+        music = gameObject.AddComponent<AudioSource>();
+        shop = Resources.Load<AudioClip>("music/shop");
+        }
+
+
         public void OnEnable()
         {
             for (int i = 0; i < otherPanels.Length; i++) otherPanels[i].SetActive(true);
@@ -51,6 +61,8 @@ namespace LayerLab
                 error.SetActive(true);
                 globe.error_status = true;
             }else{
+                music.clip = shop;
+                music.Play();
                 globe.coins --;
                 if(Player.HP != 100)
                     Player.HP +=10;
@@ -62,6 +74,8 @@ namespace LayerLab
                 error.SetActive(true);
                 globe.error_status = true;
             }else{
+                music.clip = shop;
+                music.Play();
                 globe.coins -= 5;
                 if(Player.HP < 50)
                     Player.HP +=50;
@@ -75,6 +89,8 @@ namespace LayerLab
                 error.SetActive(true);
                 globe.error_status = true;
             }else{
+                music.clip = shop;
+                music.Play();
                 globe.coins -= 5;
                 globe.m1++;
             }
@@ -86,6 +102,8 @@ namespace LayerLab
                 globe.error_status = true;
             }else{
                 globe.coins -= 5;
+                music.clip = shop;
+                music.Play();
                 globe.m2++;
             }
         }
