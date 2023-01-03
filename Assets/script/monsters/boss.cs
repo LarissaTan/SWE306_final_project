@@ -11,7 +11,7 @@ public class boss : MonoBehaviour
     [SerializeField] protected Animator animator;
     public Collider2D myCollider;
 
-    public GameObject l1, l2, l3, l4;
+    public GameObject l;
     public Transform lp1, lp2, lp3, lp4;
     private float timer = 0;
     private float tmp_timer = 0;
@@ -88,7 +88,6 @@ public class boss : MonoBehaviour
                     case 1:
                         isAttack = true;
                         animator.SetBool("IsAttack", true);
-                        if(isAngry)    light();
                         break;
                     default:
                         break;
@@ -109,10 +108,11 @@ public class boss : MonoBehaviour
         music.clip = skill;
         music.Play();
 
-        Instantiate(l1, lp1.position, lp1.rotation);
-        Instantiate(l2, lp2.position, lp2.rotation);
-        Instantiate(l3, lp3.position, lp3.rotation);
-        Instantiate(l4, lp4.position, lp4.rotation);
+        //lp1.transform.position = new Vector3(lp1.transform.position.x + 73, lp1.transform.position.y - 0.38f, lp1.transform.position.z);
+        Instantiate(l, lp1.position, lp1.rotation);
+        Instantiate(l, lp2.position, lp2.rotation);
+        Instantiate(l, lp3.position, lp3.rotation);
+        Instantiate(l, lp4.position, lp4.rotation);
     }
 
     void Movement(){
@@ -149,6 +149,8 @@ public class boss : MonoBehaviour
             animator.SetBool("IsIdle", true);
             timer = Time.time;
         }
+
+        if(isAngry && isAttack && Time.time - timer > 0.7) light();
     }
 
     public int damage(){

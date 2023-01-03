@@ -10,6 +10,7 @@ public class meteor : MonoBehaviour
     private float timer;
 
     void Start(){
+        Debug.Log("Meteor is woki");
         timer = Time.time;
     }
 
