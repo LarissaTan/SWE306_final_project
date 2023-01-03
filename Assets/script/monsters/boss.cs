@@ -163,6 +163,7 @@ public class boss : MonoBehaviour
     }
 
     public void getHurt(int i){
+        Debug.Log("hurting");
         isAngry = true;
         isHurt = true;
         animator.SetBool("IsHurt", true);
