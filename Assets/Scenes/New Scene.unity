@@ -31582,6 +31582,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155727753}
     m_Modifications:
+    - target: {fileID: 7999008929535059084, guid: f3803a10912f643fd814cbdb489739e0, type: 3}
+      propertyPath: tip
+      value: 
+      objectReference: {fileID: 1630393312}
+    - target: {fileID: 7999008929535059084, guid: f3803a10912f643fd814cbdb489739e0, type: 3}
+      propertyPath: teleportLocation
+      value: 
+      objectReference: {fileID: 527311791}
     - target: {fileID: 7999008929535059085, guid: f3803a10912f643fd814cbdb489739e0, type: 3}
       propertyPath: m_Name
       value: Portal1 (1)
