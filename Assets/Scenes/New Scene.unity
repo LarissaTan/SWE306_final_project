@@ -13696,6 +13696,7 @@ MonoBehaviour:
   skill: {fileID: 0}
   hurt: {fileID: 0}
   win: {fileID: 725772431}
+  tip: {fileID: 1625053528}
 --- !u!114 &1060808735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20382,7 +20383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1625053529
 RectTransform:
   m_ObjectHideFlags: 0

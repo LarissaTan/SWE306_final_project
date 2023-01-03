@@ -37,6 +37,8 @@ public class boss : MonoBehaviour
 
     public GameObject win;
     public GameObject tip;
+    private bool isTip = false;
+    private float tip_timer = 0f;
 
     void Start()
     {
@@ -65,6 +67,10 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isTip && Time.time - tip_timer >2){
+            tip.SetActive(false);
+        }
+
         if(bar.healthLevel() <= 0){
             animator.SetBool("IsDead", true);
             isDie = true;
@@ -181,6 +187,11 @@ public class boss : MonoBehaviour
     }
 
     public void getHurt(int i){
+        if(!isTip){
+            tip.SetActive(true);
+            isTip = true;
+            tip_timer = Time.time;
+        }
         music.clip = hurt;
         music.Play();
         isAngry = true;
