@@ -39,6 +39,7 @@ public class boss : MonoBehaviour
     public GameObject tip;
     private bool isTip = false;
     private float tip_timer = 0f;
+    public float dieTime = 0f;
 
     void Start()
     {
@@ -74,14 +75,15 @@ public class boss : MonoBehaviour
         if(bar.healthLevel() <= 0){
             animator.SetBool("IsDead", true);
             isDie = true;
-            timer = Time.time;
+            if (dieTime == 0) dieTime = Time.time;
         }
 
         if(isRun && !isDie)   Movement();
         else        rb.velocity = new Vector2(0, 0);
 
-        if(isDie && Time.time - timer > 1){
+        if(isDie && Time.time - dieTime > 1){
             animator.SetBool("IsDead", false);
+            Debug.Log("win");
             win.SetActive(true);
             Destroy(this.gameObject);
         }{
